@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative:700|Courgette" rel="stylesheet">
+<style>
+.backg{
+            background-color: #ffcccc;
+            width:350px;
+            height:510px;
+            overflow:hidden;
+        }
+        .hair1{
+            height: 50px;
+            width: 100px;
+            border-top-left-radius:50px;
+            border-top-right-radius:50px;
+            background-color: black;
+            position: relative;
+            top:260px;
+            left:120px;
+        }
+        .hair2{
+            width: 100px;
+            height:140px;
+            background-color:black;
+            position: relative;
+            border-radius: 0px 0px 60px 60px;
+            top:50px;
+        }
+        .face{
+            background-color: #ffecb3;
+            height: 70px;
+            width: 80px;
+            border-bottom-left-radius:50px;
+            border-bottom-right-radius:50px;
+            position: relative;
+            left:10px;
+
+        }
+        .eyel{
+            background-color: white;
+            width:20px;
+            height: 20px;
+            border-radius: 50%;
+            position: relative;
+            top:12px;
+            left:9px;
+            
+        }
+        
+        .eyer{
+            background-color: white;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            position: relative;
+            bottom: 8px;
+            left:54px;
+        }
+        .eyeball1,.eyeball2{
+            position: relative;
+            height: 13px;
+            width: 13px;
+            background-color: black;
+            border-radius: 50%;
+            top:4px;
+            left:4.1px;
+        }
+
+       
+        
+        .dot1,.dot3{
+            width:4px;
+            height: 4px;
+            border-radius: 50%;
+            background-color: white;
+            position: relative;
+            top:2px;
+        }
+        .dot1{
+            left:2px;
+        }
+        .dot3{
+            left:7px;
+        }
+        .dot2,.dot4{
+            width: 1.5px;
+            height: 1.5px;
+            background-color: white;
+            position: relative;
+            top:4.6px;
+            border-radius: 50%;
+        }
+        .dot2{
+            left:7px;
+        }
+        .dot4{
+            left:5px;
+        }
+       
+        .mouth{
+            width: 20px;
+            height: 20px;
+            background:#ffb3b3;
+            -webkit-border-radius: 20px 0px;
+            border-radius: 20px 0px;
+               left:31px;
+            bottom:0px;
+            transform: rotate(45deg);
+            position: relative;
+        }
+        .line{
+            position: relative;
+            background-color: white;
+            width:10px;
+            height:1.1px;
+            left:36px;
+            bottom:11px;
+            
+        }
+        .neck{
+            position: relative;
+            width:20px;
+            height:25px;
+            background-color:#ffecb3;
+            left:28px; 
+        }
+        .t1{
+            position: relative;
+            bottom:35px;
+            right:30px;
+        }
+        .handl{
+            position: relative;
+            background-color: #ffecb3;
+            height: 120px;
+            width: 20px;
+            border-radius:10px;
+            right: 24px;
+            bottom: 6px;
+            transform: rotate(10deg);
+        }
+        .handr{
+            position: relative;
+            background-color: #ffecb3;
+            height: 120px;
+            width: 20px;
+            border-radius:10px;
+            left:82px;
+            bottom:126px;
+            transform: rotate(-10deg);
+
+        }
+        .body{
+            width:80px;
+            height: 120px;
+            background-color: #ffecb3;
+            border-radius: 15px;
+            position: relative;
+            bottom:245px;
+            right:1px;
+        }
+        .top2{
+            width: 80px;
+            height:90px;
+            background-color:#ff5050;
+            position: relative;
+            bottom:450px;
+            visibility: hidden;
+            right:1px;
+        }
+        .top4{
+            background-color: #d5a1fc;
+            position: relative;
+            height: 90px;
+            width: 80px;
+            bottom: 636px;
+            right: 1px;
+            visibility: hidden;
+        }
+        .strap3{
+            
+            position: relative;
+            border-bottom: 30px solid #d5a1fc;
+            border-left: 80px solid transparent;
+            bottom: 28px;
+
+        }
+        .top3{
+            width: 80px;
+            height:90px;
+            background-color:#d9ff66;
+            position: relative;
+            bottom:544px;
+            right:1px;
+            visibility: hidden;
+        }
+        .strap1{
+            position: relative;
+            background-color: #d9ff66;
+            width:5px;
+            height: 41px;
+            bottom: 35px;
+            left:13px;
+            transform: rotate(30deg);
+        }
+        .strap2{
+            position: relative;
+            background-color: #d9ff66;
+            width:5px;
+            height: 41px;
+            bottom: 76px;
+            left:60px;
+            transform: rotate(-30deg);
+        }
+        .n1,.n2{
+                position: relative;
+                
+                width: 40px;
+                height: 20px;
+                border-top-left-radius: 40px;
+                  border-top-right-radius: 40px;
+                background: #ff5050;
+        }
+        .n1{
+            bottom:17px;
+            right:0px;
+
+        }
+        .n2{
+            bottom: 35px;
+            left:40px;
+        }
+
+        .top1{
+            width:80px;
+            height: 120px;
+            background-color: tomato;
+            border-radius: 15px;
+            position: relative;
+            bottom:365px;
+            right:1px;
+            visibility: visible;
+        }
+        .neck1{
+            position: relative;
+            left:14px;
+            width: 50px;
+            height: 25px;
+            border-bottom-left-radius: 50px;
+              border-bottom-right-radius: 50px;
+            background: #ffecb3;
+        }
+        .sleevel1{
+            width: 20px;
+            height: 25px;
+            background-color: tomato;
+            transform: rotate(10deg);
+            right:16px;
+            bottom: 26.5px;
+            position: relative;
+            border-top-left-radius: 25px;
+              border-top-right-radius: 25px;
+
+        }
+        .sleever1{
+            width: 20px;
+            height: 25px;
+            background-color:tomato;
+            transform: rotate(-10deg);
+            left:75px;
+            bottom: 50px;
+            position: relative;
+            border-top-left-radius: 25px;
+              border-top-right-radius: 25px;
+        }
+        .print1{
+            width:65px;
+            bottom:45px;
+            left:5px;
+            position: relative;
+        }
+        .sleevel2{
+            width: 20px;
+            height:15px;
+            transform: rotate(10deg);
+            background-color: #ff5050;
+            position: relative;
+            right:18px;
+            bottom:50px;
+        }
+        .sleever2{
+            width: 20px;
+            height:15px;
+            transform: rotate(-10deg);
+            background-color:#ff5050;
+            position: relative;
+            left:78px;
+            bottom:63px;
+        }
+        .glass1{
+            width:80px;
+            bottom: 827px;
+            position: relative;
+            visibility: hidden; 
+        }
+        .hairb1{
+            width: 80px;
+            bottom: 920px;
+            left:35px;
+            position: relative;
+            transform: rotate(35deg);
+            visibility: hidden;
+        }
+        .hat1{
+            width: 130px;
+            bottom:1015px;
+            right: 27px;
+            position: relative;
+            visibility:hidden;
+        }
+        .hairb2{
+            width: 75px;
+            bottom:1075px;
+            left:4px;
+            position: relative;
+            visibility: hidden;
+        }
+        .heading{
+            background-color:white;
+            padding:8px;
+            border:2px solid #ff8080;
+            border-radius: 10px;
+            color:#ff8080;
+            text-align: center;
+            position: relative;
+            bottom:30px;
+            font-family: 'Cinzel Decorative', cursive;
+            font-size:30px;
+        }
+        .choose{
+            background-color: #ff8080;
+            padding: 10px;
+            text-align: center;
+        }
+        .b{
+            background-color: white;
+            border:2px solid #ff8080;
+            border-radius: 10px;
+            color:#ff8080;
+            padding: 5px;
+            font-size: 19px;
+            font-family: 'Courgette', cursive;;
+
+        }
+</style>
+<script>
+         var hairs=["black","#000066","tomato","#993300","#5c5c3d","#000066"];
+            var tops=["top1","top2","top3","top4"];
+            var acc=["acc1","acc2","acc3","acc4"];
+            var eye=["black","#99ccff","#ff99ff","#993300","#b3ff66","#cc0066"]
+            var skin=["#fff9e6","#ffecb3","#ffb366","#4d2600"];
+            var lips=["#ffb3b3","#ff6347","#ffa347","#cc66ff","#cc0000","#cc0066"];
+            var j=0;
+            var i=0;
+            var k=0;
+            var l=0;
+            var m=0;
+            var n=0;
+            function chngehair() {
+            if(i==(hairs.length)-1){
+                i=0;
+            }
+            else{
+            i++;
+            }
+            document.getElementById("hair1").style.backgroundColor=hairs[i];
+            document.getElementById("hair2").style.backgroundColor=hairs[i];
+            }
+            function chngetop(){
+                document.getElementById(tops[j]).style.visibility="hidden";
+                if(j==(tops.length)-1){
+                    j=0;
+                }
+                else{
+                    j++;
+                }
+                document.getElementById(tops[j]).style.visibility="visible";
+            }
+            function chngeacc(){
+                document.getElementById(acc[k]).style.visibility="hidden";
+                if(k==(acc.length)-1){
+                    k=0;
+                }
+                else{
+                    k++;
+                }
+                document.getElementById(acc[k]).style.visibility="visible";
+            }
+            function chngeeye(){
+                if(l==(eye.length)-1){
+                    l=0;
+                }
+                else{
+                    l++;
+                }
+                document.getElementById("eye1").style.backgroundColor=eye[l];
+                document.getElementById("eye2").style.backgroundColor=eye[l];
+            }
+            function chngeskin() {
+            if(m==(skin.length)-1){
+                m=0;
+            }
+            else{
+            m++;
+            }
+            document.getElementById("face").style.backgroundColor=skin[m];
+            document.getElementById("handl").style.backgroundColor=skin[m];
+            document.getElementById("handr").style.backgroundColor=skin[m];
+            document.getElementById("neck").style.backgroundColor=skin[m];
+            document.getElementById("neck1").style.backgroundColor=skin[m];
+            document.getElementById("body").style.backgroundColor=skin[m];
+            }
+            function chngelip(){
+                if(n==(lips.length)-1){
+                    n=0;
+                }
+                   else{
+                    n++;
+                }
+                document.getElementById("lip").style.backgroundColor=lips[n];
+            }
+</script>
+  
+</head>
+<body>
+<div class="backg">
+    <div class="girl">
+        <div class="hair1" id="hair1">
+            <div class="hair2" id="hair2">
+                <div class="face" id="face">
+                    <div class="eyel">
+                        <div class="eyeball1" id="eye1">
+                            <div class="dot1"></div>
+                            <div class="dot2"></div>
+                        </div>
+                    </div>
+                    <div class="eyer">
+                        <div class="eyeball2" id="eye2">
+                            <div class="dot3"></div>
+                            <div class="dot4"></div>
+                        </div>
+                    </div>
+                    <div class="mouth" id="lip">
+                        
+                    </div>
+                    <div class="line"></div>
+                    <div class="neck" id="neck"></div>
+                    <div class="handl" id="handl"></div>
+                    <div class="handr" id="handr"></div>
+                       <div class="body" id="body"></div>
+                       <div class="top1" id="top1">
+                           <div class="neck1" id="neck1"></div>
+                           <div class="sleevel1"></div>
+                           <div class="sleever1"></div>
+                           <img src="https://imageshack.com/a/img924/7523/RB7OyB.png" class="print1">
+                       </div>           
+                       <div class="top2" id="top2">
+                           <div class="n1"></div>
+                           <div class="n2"></div>
+                           <div class="sleevel2"></div>
+                           <div class="sleever2"></div>
+                       </div> 
+                       <div class="top3" id="top3">
+                           <div class="strap1"></div>
+                           <div class="strap2"></div>
+
+                       </div>
+                       <div class="top4" id="top4">
+                           <div class="strap3"></div>
+                       </div>
+                       <img src="https://i.imgur.com/irQdOYT.png" class="glass1" id="acc1">
+                       <img src="https://i.imgur.com/8eGJtID.png" class="hairb1" id="acc2">
+                       <img src="https://imagizer.imageshack.com/v2/640x369q90/r/921/zgokt5.png" class="hat1" id="acc3">
+                       <img src="https://imagizer.imageshack.com/v2/500x294q90/r/923/qpy8TT.png" class="hairb2" id="acc4">
+                </div>
+            </div>
+            
+           
+
+    </div>
+    <div class="heading">Doll Dress-Up</div>
+    <div class="choose">
+        <button type="button" class="b" onclick="chngehair()">Hair</button>
+        <button type="button" class="b" onclick="chngetop()">Tops</button>
+        <button type="button" class="b" onclick="chngeacc()">Accesories</button><br><br>
+        <button type="button" class="b" onclick="chngeeye()">Eyes</button>
+        <button type="button" class="b" onclick="chngeskin()">Skin</button>
+        <button type="button" class="b" onclick="chngelip()">Lips</button>
+    </div>
+</div>
+</body>
+</html>

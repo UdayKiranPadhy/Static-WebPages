@@ -1,0 +1,376 @@
+<!--Inspired By a Google sticker by Robin Davey-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Coding Kitty</title>
+	<link href="https://fonts.googleapis.com/css?family=Krub:500" rel="stylesheet">
+</head>
+<style>
+	body{
+			background-color: #4db6ac;
+			margin: 0;
+			padding: 0;
+		}
+		.backg{
+			width:350px;
+            height:450px; 
+            position: absolute;
+            margin: auto;
+            top:0;
+            bottom: 0;
+            left:0;
+            right: 0;
+           
+	}
+		.kitty{
+			position: relative;
+			right: 25px;
+			bottom: 80px;
+		}
+		.ear-l,.ear-r{
+			background-color: #333399;
+			height: 30px;
+			width:22px;
+			border-radius:10px 30px 0 0; 
+		}
+		.ear-l{
+			position: relative;
+			top:150px;
+			left:138px;
+		}
+		.ear-r{
+			position: relative;
+			top:120px;
+			left:160px;
+		}
+		.face{
+			position: relative;
+			background-color: #6666cc;
+			height: 80px;
+			width: 150px;
+			border-radius: 100px;
+			top:110px;
+			left:82px;
+		}
+		.eyes{
+			height: 20px;
+		}
+		.eye-l,.eye-r{
+			background-color: #330033;
+			height:12px;
+			width:12px;
+			border-radius: 50%;
+			position: relative;
+			
+		}
+		
+		.eye-l{
+			top:22px;
+			left:68px;
+			animation: blink 1.5s infinite;
+			-webkit-animation: blink 1.5s infinite;
+		}
+		@keyframes blink{
+			20%{
+				height: 5px;
+				top:25px;
+			}
+		}
+		@-webkit-keyframes blink{
+			20%{
+				height: 5px;
+				top:25px;
+			}
+		}
+		.eye-r{
+			top:10px;
+			left:86px;
+			animation: blnk 1.5s infinite;
+			-webkit-animation: blnk 1.5s infinite;
+		}
+		@keyframes blnk{
+			20%{
+				height: 5px;
+				top:20px;
+			}
+		}
+		@-webkit-keyframes blnk{
+			20%{
+				height: 5px;
+				top:20px;
+			}
+		}
+		.mouth{
+			background-color: white;
+			width: 47px;
+			height:15px;
+			border-radius: 20px;
+			position: relative;
+			top:18px;
+			left:65px;
+		}
+		.m1,.m2{
+			background-color: white;
+			height: 25px;
+			width: 25px;
+			border-radius: 50%;
+			position: relative;
+		}
+		.m1{
+			right: 1.5px;
+
+		}
+		.m2{
+			left:25px;
+			bottom: 25px;
+
+		}
+		.nose{
+			position: relative;
+			height: 0;
+			width: 0;
+			border-left:12px solid transparent;
+			border-right: 12px solid transparent;
+			border-top:12px solid #ff9999;
+			bottom: 49.8px;
+			left:12.5px; 
+		}
+		.body{
+			position: relative;
+			top:30px;
+			right: 10px;
+            height: 0px;
+            width: 115px;
+            border-bottom: 110px solid #6666cc;
+            border-left: 30px solid transparent;
+            border-right: 30px solid transparent;
+		}
+		.hand{
+			height:50px;
+			position: relative; 
+		}
+		.hand-l{
+			position: relative;
+			background-color: white;
+			height:28px;
+			width: 22px;
+			border-radius: 10px; 
+			left:45px;
+			top:30px;
+			animation:type 1.5s infinite;
+			-webkit-animation:type 1.5s infinite; 
+		}
+		@keyframes type{
+			50%{
+				top:78px;
+				height:18px; 
+			}
+		}
+		@-webkit-keyframes type{
+			50%{
+				top:78px;
+				height:18px; 
+			}
+		}
+		.hand-r{
+			position: relative;
+			background-color: white;
+			height:18px;
+			width: 22px;
+			border-radius: 10px;
+			left:85px;
+			top:48px;
+			animation: typ 1.5s infinite;
+			-webkit-animation: typ 1.5s infinite; 
+		}
+		@keyframes typ{
+			50%{
+				top: 20px;
+				height: 28px;
+			}
+		}
+		@-webkit-keyframes typ{
+			50%{
+				top: 20px;
+				height: 28px;
+			}
+		}
+		.tail{
+			height: 22px;
+			width:50px;
+			background-color: #333399;
+			position: relative;
+			border-radius: 22px;
+			right: 15px;
+			top:10px;
+		}
+		.laptop{
+			position: relative;
+			background-color: #333399;
+			height: 15px;
+			width: 120px;
+			border-radius:15px;
+			top:112px;
+			left:185px; 
+		}
+		.side{
+			position: relative;
+			background-color: #330033;
+			height: 15px;
+			width: 100px;
+			border-radius:15px;
+			top:0px;
+			right:80px; 
+		}
+		.screen{
+			position: relative;
+			height: 80px;
+			width: 110px;
+			background-color: #330033;
+			border-radius:5px;
+			transform: skew(-10deg);
+			-webkit-transform: skew(-10deg);
+			bottom:94px;
+			left:10px; 
+		}
+		.logo{
+			position: relative;
+			background-color: #6666cc;
+			height: 18px;
+			width: 35px;
+			border-radius: 20px;
+			top:35px;
+			left:43px;
+			transform: skew(10deg);
+			-webkit-transform: skew(10deg);
+		}
+		.w1{
+			background-color: #330033;
+			height: 1.2px;
+			width: 20px;
+			position: relative;
+			bottom:58px;
+			z-index: 1;
+			transform: rotate(7deg);
+			-webkit-transform: rotate(7deg);
+			right: 10px;
+		}
+		.w2{
+			background-color: #330033;
+			height: 1.2px;
+			width: 25px;
+			position: relative;
+			bottom:52px;
+			z-index: 1;
+			right: 16px;
+
+		}
+		.w3{
+			background-color: #330033;
+			height: 1.2px;
+			width: 20px;
+			position: relative;
+			bottom:45px;
+			z-index: 1;
+			transform: rotate(-7deg);
+			-webkit-transform: rotate(-7deg);
+			right: 10px;
+		}
+		.w4{
+			background-color: #330033;
+			height: 1.2px;
+			width: 20px;
+			position: relative;
+			bottom:60px;
+			z-index: 1;
+			transform: rotate(-7deg);
+			-webkit-transform: rotate(-7deg);
+			left: 40px;
+		}
+		.w5{
+			background-color: #330033;
+			height: 1.2px;
+			width: 25px;
+			position: relative;
+			bottom:55px;
+			z-index: 1;
+			left: 40px;
+		}
+		.w6{
+			background-color: #330033;
+			height: 1.2px;
+			width: 20px;
+			position: relative;
+			bottom:50px;
+			z-index: 1;
+			transform: rotate(7deg);
+			-webkit-transform: rotate(7deg);
+			left: 40px;
+		}
+		.txt{
+			color:white;
+			font-size: 25px;
+			text-transform: uppercase;
+			text-align: center;
+			position: relative;
+			top:60px;
+			font-family: 'Krub', sans-serif;
+		}
+		
+		.txt1{
+			position: relative;
+			text-transform: uppercase;
+			text-align: center;
+			font-size: 25px;
+			color:white;
+			font-family: 'Krub', sans-serif;
+			top:130px;
+		}
+</style>
+<body>
+	<div class="backg">
+		<div class="txt">My Code Works<br>
+			I have no idea Why</div>
+		<div class="kitty">
+			<div class="ear-l"></div>
+			<div class="ear-r"></div>
+			<div class="face">
+				<div class="eyes">
+					<div class="eye-l"></div>
+					<div class="eye-r"></div>
+				</div>
+				<div class="mouth">
+					<div class="m1"></div>
+					<div class="m2"></div>
+					<div class="nose"></div>
+					<div class="w1"></div>
+					<div class="w2"></div>
+					<div class="w3"></div>
+					<div class="w4"></div>
+					<div class="w5"></div>
+					<div class="w6"></div>
+
+				</div>
+				<div class="body">
+					<div class="hand">
+						<div class="hand-l"></div>
+						<div class="hand-r"></div>
+					</div>
+				</div>
+				<div class="tail"></div>
+			</div>
+
+		</div>
+		<div class="laptop">
+			<div class="side"></div>
+			<div class="screen">
+				<div class="logo"></div>
+			</div>
+
+		</div>
+		<div class="txt1">
+			My Code Doesn't Work <br>I have No Idea Why
+		</div>
+	</div>
+</body>
+</html>

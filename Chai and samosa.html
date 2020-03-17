@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+<style>
+.container{
+            height: 500px;
+            width: 350px;
+            position: absolute;
+            margin:auto;
+            top:0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color:#ffe066;
+            overflow-x:hidden;
+            overflow-y:scroll ;
+        }
+        .samosa{
+            height: 0;
+            width: 0;
+            border-bottom: 170px solid #fcb03c;
+            border-left: 90px solid transparent;
+            border-right: 90px solid transparent;
+            position: absolute;
+            right: -180px;
+            top:80px;
+            animation: swipe1 2s forwards;
+        }
+        .sauce{
+            height: 0;
+            width: 0;
+            border-bottom:60px solid #c82e35; 
+            border-left: 30px solid transparent;
+            border-right: 30px solid transparent;
+            position: absolute;
+            left:-30px;
+        }
+        .drip1{
+            background-color: #c82e35;
+            height:40px;
+            width: 15px;
+            border-radius: 15px;
+            position: relative;
+            top:50px;
+        }
+        .drip2{
+            background-color: #c82e35;
+            height: 20px;
+            width: 8px;
+            border-radius:0 0 10px 10px;
+            position: relative;
+            top:19px;
+            left:19px;
+        }
+        .chai{
+            height:0; 
+            width: 50px;
+            border-top:100px solid #AB6E15;
+            border-left:20px solid transparent;
+            border-right: 20px solid transparent;    
+            position: absolute;
+            top:160px;
+            left: -110px;
+            animation: swipe2 2s forwards;
+        }
+        .glass{
+            height:0; 
+            width: 55px;
+            border-top:130px solid rgba(255,255,255,0.3);
+            border-left:30px solid transparent;
+            border-right: 30px solid transparent;    
+            position: absolute;
+            bottom: -2px;
+            left:-32px;
+        }
+        @keyframes swipe1{
+            100%{
+                transform: translateX(-230px);
+            }
+        }
+        @keyframes swipe2{
+            100%{
+                transform: translateX(200px);
+            }
+        }
+        .text,.span{
+            color:#c82e35;
+            width: 300px;
+            position:relative;
+            margin:auto;
+            left:0;
+            right: 0;
+            top:270px; 
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .text{
+            font-size: 15px;
+            text-align:justify ;
+        }
+        span{
+            font-size:30px;
+        }
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="samosa">
+            <div class="sauce">
+                <div class="drip1"></div>
+                <div class="drip2"></div>
+            </div>
+        </div>
+        <div class="chai">
+            <div class="glass"></div>
+        </div>
+        <div class="text"><span>CHAI N SAMOSA</span><br>
+        India doesn't have any official national dish but 'Samosa' is quite famous. It is basically fried- flour shell stuffed with a variety of fillings(Potato is quite common).It is Enjoyed with Spiced Tea which is called 'Chai'. </div>
+    </div>
+</body>
+</html>

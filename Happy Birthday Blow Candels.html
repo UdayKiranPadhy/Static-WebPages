@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+<style>
+   body{
+       background-color: #ccffff;
+       padding:0;
+       margin:0;
+  }
+   .backg{
+            width:350px;
+            height:550px;
+        }
+        .table{
+            border-bottom: 130px solid  #f2a65a;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            height: 0;
+            width: 308px;
+            position: relative;
+            top:420px;
+            
+        }
+        .hair1{
+            height: 70px;
+            width: 140px;
+            border-top-left-radius:70px;
+            border-top-right-radius:70px;
+            background-color: black;
+            position: relative;
+            top:30px;
+            left:95px;
+        }
+        .hair2{
+            width: 140px;
+            height:180px;
+            background-color:black;
+            position: relative;
+            border-radius: 0px 0px 60px 60px;
+            top:62.5px;
+        }
+        .face{
+            background-color: #ffecb3;
+            height: 90px;
+            width: 110px;
+            border-bottom-left-radius:70px;
+            border-bottom-right-radius:70px;
+            position: relative;
+            left:15px;
+
+        }
+        .eyel{
+            background-color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            position: relative;
+            top:16px;
+            left:9px;
+            
+        }
+        
+        .eyer{
+            background-color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            position: relative;
+            bottom: 14px;
+            left:70px;
+        }
+        .eyeball1,.eyeball2{
+            position: relative;
+            height: 20px;
+            width: 20px;
+            background-color: black;
+            border-radius: 50%;
+            top:4px;
+            left:4.5px;
+        }
+
+        .girl:hover .eyeball1{
+            animation: 4s see ;
+            -webkit-animation: 4s see ;
+        }
+        @keyframes see{
+            50%{
+                top:8.5px;
+                left:6.5px;
+            }
+        }
+        @-webkit-keyframes see{
+            50%{
+                top:8.5px;
+                left:6.5px;
+            }
+        }
+        .girl:hover .eyeball2{
+            animation: 4s seee ;
+            -webkit-animation: 4s seee ;
+        }
+        @keyframes seee{
+            50%{
+                top:8px;
+                left:2px;
+            }
+        }
+        @-webkit-keyframes seee{
+            50%{
+                top:8px;
+                left:2px;
+            }
+        }
+        .dot1,.dot3{
+            width:8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: white;
+            position: relative;
+            top:4px;
+        }
+        .dot1{
+            left:2px;
+        }
+        .dot3{
+            left:10px;
+        }
+        .dot2,.dot4{
+            width: 3px;
+            height: 3px;
+            background-color: white;
+            position: relative;
+            top:4px;
+            border-radius: 50%;
+        }
+        .dot2{
+            left:14px;
+        }
+        .dot4{
+            left:5px;
+        }
+        .belt{
+            background-color: #66ccff;
+            height: 55px;
+            width: 110px;
+            border-top-left-radius:70px;
+            border-top-right-radius:70px;
+            bottom: 143px;
+            left:14.5px;
+            position: relative;
+        }
+        .belt1{
+            background-color: black;
+            height: 56px;
+            width: 112px;
+            border-top-left-radius:70px;
+            border-top-right-radius:70px;
+            position: relative;
+            left:-0.5px;
+            top:7px;
+        }
+        .mouth{
+            background-color: #ffb3b3;
+            height: 25px;
+            width: 50px;
+            left:29px;
+            bottom: 5px;
+            border-bottom-left-radius:70px;
+            border-bottom-right-radius:70px;
+            position: relative;
+        }
+        .girl:hover .mouth{
+            animation:4s blow ;
+            -webkit-animation:4s blow ;
+        }
+        @keyframes blow{
+                50%{
+                    width: 20px;
+                    height: 20px;
+                    left:43px;
+                    border-radius: 50%;
+                    
+
+                }
+        }
+        @-webkit-keyframes blow{
+                50%{
+                    width: 20px;
+                    height: 20px;
+                    left:43px;
+                    border-radius: 50%;
+                    
+
+                }
+        }
+        .dress{
+            background-color: #66ccff;
+            width:120px;
+            height:130px;
+            border-radius:35px 35px 0px 0px ;
+            position: relative;
+            top:18px;
+            right: 6px;
+        }
+        .neck{
+            background-color: #ffecb3;
+            position: relative;
+            height:40px;
+            width: 30px;
+            border-radius: 0px 0px 15px 15px;
+            bottom:130px;
+            left:40px;
+        }
+        .earl,.earr{
+            background-color: #ffecb3;
+            position: relative;
+            height: 10px;
+            width: 20px;
+            
+            border-top-left-radius:70px;
+            border-top-right-radius:70px;
+        }
+        .earl{
+            transform:rotate(-90deg);
+            right:5px;
+            bottom:118px;
+        }
+        .earr{
+            transform:rotate(90deg);
+            left:124px;
+            bottom:127px;
+        }
+        .cake{
+            background-color: #ff6666;
+            width:180px;
+            height: 70px;
+            
+            position: relative;
+            top:200px;
+            left:70px;
+        }
+        .strip1{
+            width: 180px;
+            height: 10px;
+            background-color: #ffffb3;
+            position: relative;
+            top:30px;
+        }
+        .cake1{
+            background-color: #ffff80;
+            width:140px;
+            height: 60px;
+            bottom:70px;
+            left:22px;
+            position: relative;
+            
+
+        }
+        .strip2{
+            width: 140px;
+            height: 10px;
+            top:30px;
+            background-color: #ffffb3;
+            position: relative;
+            
+        }
+        .d1,.d2,.d3,.d4,.d5,.d6,.d7,.d8,.d9{
+            border-bottom-left-radius:70px;
+            border-bottom-right-radius:70px;
+            position: relative;    
+            height: 10px;
+            width: 20px;
+            background-color: white;
+        }
+        .d1{
+            bottom:10px;
+        }
+        .d2{
+            left:20px;
+            bottom: 20px;
+        }
+        .d3{
+            left:40px;
+            bottom:30px;
+        }
+        .d4{
+            left:60px;
+            bottom: 40px;
+        }
+        .d5{
+            left:80px;
+            bottom: 50px;
+        }
+        .d6{
+            left:100px;
+            bottom: 60px;
+        }
+        .d7{
+            left:120px;
+            bottom: 70px
+        }
+        .d8{
+            left:140px;
+            bottom: 80px;
+        }
+        .d9{
+            bottom:90px;
+            left:-20px;
+        }
+        .drip{
+            position: relative;
+            bottom: 10px;
+            right: 1.5px;
+        }
+        .candle{
+            height:40px;
+            width: 15px;
+            background-color:#dfff80;
+            position: relative;
+            top:144px;
+            left:157px;
+            
+        }
+        
+        .c1,.c2,.c3,.c4,.c5,.c6,.c7{
+            height: 15px;
+            width: 15px;
+            border-radius: 50%;
+            position: relative;
+            background-color:#ff6666;
+        }
+        .c1{
+            bottom:185px; 
+        }
+        .c2{
+            bottom:200px;
+            left:20px; 
+        }
+        .c3{
+            bottom:215px;
+            left:40px; 
+        }
+        .c4{
+            bottom:230px;
+            left:60px; 
+        }
+        .c5{
+            bottom:245px;
+            left:80px; 
+        }
+        .c6{
+            bottom:260px;
+            left:100px; 
+        }
+        .c7{
+            bottom:275px;
+            left:120px; 
+        }
+        .flame{
+            width:15px;
+            height: 7.5px;
+            position: relative;
+            background-color: #ffcc00;
+            bottom:8px;
+            border-bottom-left-radius:70px;
+            border-bottom-right-radius:70px;
+        }
+        .girl:hover .flame{
+            animation: 2s vanish forwards ;
+            webkit-animation: 2s vanish forwards;
+        }
+        @keyframes vanish{
+            100%{
+               background-color:#ffecb3;
+                }
+        }
+        @-webkit-keyframes vanish{
+            100%{
+                background-color: #ffecb3;
+            }
+        }
+
+        .flame1{
+            width: 0;
+            height: 0;
+            border-left: 7.5px solid transparent;
+            border-right: 7.5px solid transparent;
+            border-bottom: 15px solid #ffcc00;
+            position: relative;
+            bottom: 15px;
+        }
+
+        .girl:hover .flame1{
+            animation: 2s vanishh forwards;
+            webkit-animation: 2s vanishh forwards;
+        }
+
+        @keyframes vanishh{
+            100%{
+                    border-bottom: 15px solid #ffecb3;
+            }
+        }
+        @-webkit-keyframes vanishh{
+            100%{
+                    border-bottom: 15px solid #ffecb3;
+            }
+        }
+    
+</style>
+</head>
+<body>
+<div class="backg">
+    <div class="table">
+        
+    </div>
+    <div class="girl">
+        <div class="hair1">
+            <div class="hair2">
+                <div class="face">
+                    <div class="eyel">
+                        <div class="eyeball1">
+                            <div class="dot1"></div>
+                            <div class="dot2"></div>
+                        </div>
+                    </div>
+                    <div class="eyer">
+                        <div class="eyeball2">
+                            <div class="dot3"></div>
+                            <div class="dot4"></div>
+                        </div>
+                    </div>
+                    <div class="mouth"></div>
+                    <div class="dress"></div>
+                    <div class="neck"></div>
+                    
+                </div>
+
+            <div class="belt">
+                <div class="belt1"></div>
+            </div>    
+            <div class="earl"></div>
+            <div class="earr"></div>
+            </div>
+        </div>
+     <div class="candle">
+                <div class="flame">
+                    <div class="flame1"></div>
+                    
+
+                </div>
+            </div>   
+    </div>
+    <div class="cake">
+        <div class="strip1"></div>
+        <div class="cake1">
+            <div class="strip2"></div>
+            <div class="d1"></div>
+            <div class="d2"></div>
+            <div class="d3"></div>
+            <div class="d4"></div>
+            <div class="d5"></div>
+            <div class="d6"></div>
+            <div class="d7"></div>
+            
+
+            <div class="drip">
+                <div class="d1"></div>
+                <div class="d2"></div>
+                <div class="d3"></div>
+                <div class="d4"></div>
+                <div class="d5"></div>
+                <div class="d6"></div>
+                <div class="d7"></div>
+                <div class="d8"></div>
+                <div class="d9"></div>
+            </div>
+            
+            <div class="c1"></div>
+            <div class="c2"></div>
+            <div class="c3"></div>
+            <div class="c4"></div>
+            <div class="c5"></div>
+            <div class="c6"></div>
+            <div class="c7"></div>
+        </div>
+        
+    </div>
+</div>
+
+</body>
+</html>

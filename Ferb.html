@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ferb</title>
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:500" rel="stylesheet">
+    <style>
+    body{
+        background-color: #a1b8bf;
+    }
+        .backg{
+            position: absolute;
+            width:350px;
+            height:510px; 
+            margin: auto;
+            left:0;
+            right: 0;
+            top:0;
+            bottom: 0;
+            
+        }
+        .face{
+            position: relative;
+            top:100px;
+            left:140px;
+            width:45px;
+            height: 0;
+            border-top:160px solid #fee1c3;
+            border-right:5px solid transparent;
+            border-left:5px solid transparent;  
+        }
+        .nose{
+            background-color: #fee1c3;
+            height: 45px;
+            width: 45px;
+            position: relative;
+            right: 35px;
+            bottom:152px;
+            border-radius: 10px;
+        }
+        .ear{
+            background-color: #fee1c3;
+            height: 22px;
+            width: 20px;
+            border-radius:0 20px 20px 0;
+            position: relative;
+            left:42px;
+            bottom:182px;
+        }
+        .lip{
+            height: 0;
+            width: 0;
+            border-bottom: 20px solid #fee1c3;
+            border-right: 8px solid transparent;
+            border-left: 8px solid transparent;
+            position: relative;
+            bottom: 162px;
+            right: 7px;
+        }
+        .hair{
+            position: relative;
+            bottom:305px;
+            left:2.2px;
+        }
+        .h1{
+            background-color: transparent;
+            height: 30px;
+            width: 100px;
+            border-radius: 50px 40px 0 0;
+            border-top:20px solid #20a44a;
+            position: relative;
+            right: 38px;
+            top:2px;
+            transform: rotate(-5deg); 
+        }
+        .h2{
+            background-color: transparent;
+            height: 30px;
+            width: 40px;
+            border-radius: 30px 50px 0 0;
+            border-top:10px solid #20a44a;
+            position: relative;
+            left:15px;
+            bottom:33px;
+        }
+        .h3{
+            background-color: transparent;
+            height: 30px;
+            width: 45px;
+            border-radius: 50%;
+            border-top:10px solid #20a44a;
+            position: relative;
+            left:18px;
+            bottom:90px;
+            transform: rotate(-20deg);
+        }
+        .h4{
+            background-color: transparent;
+            height: 30px;
+            width: 30px;
+            border-radius: 50%;
+            border-top:10px solid #20a44a;
+            position: relative;
+            left:25px;
+            bottom:147px;
+            transform: rotate(-120deg);
+        }
+        .h5{
+            height: 0;
+            width: 0;
+            border-bottom: 50px solid #20a44a;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            position: relative;
+            bottom: 195px;
+            right: 5px; 
+            transform: rotate(-70deg);
+        }
+        .eyel{
+            height: 35px;
+            width: 29px;
+            border-radius: 50%;
+            background-color: white;
+            border:1px solid black;
+            position: relative;
+            bottom:146px;
+            right:17px;
+        }
+        .eyer{
+            height: 28px;
+            width: 25px;
+            border-radius: 50%;
+            background-color: white;
+            border:1px solid black;
+            position: relative;
+            bottom:480px;
+        }
+        .eyeb1{
+            background-color: black;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            position: relative;
+            top:20px;
+            left:8px;
+        }
+        .eyeb2{
+            background-color: black;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            position: relative;
+            top:10px;
+            left:11px;
+        }
+        .dress{
+            background-color: #fff7b1;
+            height: 40px;
+            width: 55px;
+            position: relative;
+            top:100px;
+            left:140px;
+        }
+        .c1,.c2{
+            width: 0;
+            height: 0;
+            border-top:20px solid white;
+            border-right:20px solid transparent;
+            border-left: 20px solid transparent;
+            position: relative;
+        }
+        .c1{
+            bottom:5px;
+            right:11px; 
+        }
+        .c2{
+            bottom:25px;
+            left:20px;
+        }
+        .collar{
+            position: relative;
+            bottom:70px;
+            left:3px;
+        }
+        .sleevel,.sleever{
+            background-color: #fff7b1;
+            height:35px;
+            width: 20px;
+            position: relative;
+        }
+
+        .sleevel{
+            
+            right: 15px;
+            top:2px;
+            transform: rotate(45deg); 
+        }
+        .sleever{
+            bottom:33px;
+            left:44px;
+            transform: rotate(-20deg);
+        }
+        .button{
+            height: 8px;
+            width: 8px;
+            background-color: white;
+            border-radius: 50%;
+            position: relative;
+            bottom:100px;
+            left:20px;
+        }
+        .pants{
+            background-color: #4c2e82;
+            width: 55px;
+            height: 100px;
+            border-radius: 0 0 25px 25px;
+            position: relative;
+            bottom:80px;
+        }
+        .belt{
+
+        }
+        .b1,.b2,.b3,.b4{
+            background-color: #7b84bb;
+            height: 10px;
+            position: relative;
+        }
+        .b1{
+            width: 8px;
+            top:7px;
+        }
+        .b2{
+            width:11px ;
+            bottom:3px;
+            left:15px;
+        }
+        .b3{
+            width:9px;
+            bottom:13px;
+            left:34px; 
+        }
+        .b4{
+            width:5px;
+            bottom:23px; 
+            left:50px;
+        }
+        .p1,.p2{
+            background-color: #4c2e82;
+            height: 40px;
+            width: 20px;
+            position: relative;
+        }
+        .p1{
+            left:5px;
+            top:45px;
+        }
+        .p2{
+            left:30px;
+            top: 5px;
+        }
+        .leg{
+            background-color:#fee1c3;
+            width: 15px;
+            height:20px;
+            position: relative;
+            left:2.5px;
+            top:40px;  
+        }
+        .sock{
+            background-color: white;
+            width: 15px;
+            height: 10px;
+            position: relative;
+            top:18px;
+        }
+        .shoel,.shoer{
+            background-color: #333333;
+            height: 15px;
+            width: 30px;
+            position: relative;
+
+        }
+        .shoel{
+            border-radius:30px 0 0 0;
+            right: 15px;
+            top:7px; 
+        }
+        .shoer{
+            border-radius: 0 30px 0 0;
+            top:7px;
+        }
+        .handl{
+            background-color: #fee1c3;
+            height:30px;
+            width: 15px;
+            position: relative;
+            bottom:191px;
+            right: 34.5px;
+            transform: rotate(45deg); 
+        }
+        .hl1{
+            background-color: #fee1c3;
+            height: 50px;
+            width: 15px;
+            position: relative;
+            transform: rotate(95deg);
+            transform-origin: top;
+            top:26.1px;
+            left: 7.1px;
+            animation: wave 2s infinite;
+        }
+        @keyframes wave{
+            50%{
+                transform: rotate(85deg);
+            }
+        }
+        .fistl{
+            background-color: #fee1c3;
+            height: 17px;
+            width: 15px;
+            position: relative;
+            top:48px; 
+            right:0px;
+            border-radius:0 0 20px 20px ;
+        }
+        .thumbl{
+            background-color:#fee1c3;
+            height: 8px;
+            width: 8px;
+            border-radius:50%;
+            position: relative;
+            right:5px; 
+        }
+        .handr{
+            background-color: #fee1c3;
+            height:70px;
+            width: 15px;
+            position: relative;
+            bottom:222px;
+            transform: rotate(-20deg);
+            left:63px;
+            z-index: -1;
+            border-radius: 0 0 20px 20px;
+        }
+</style>
+</head>
+<body>
+    <div class="backg">
+        <div class="face">
+            <div class="eyel">
+                <div class="eyeb1"></div>
+            </div>
+            <div class="nose"></div>
+            <div class="ear"></div>
+            <div class="lip"></div>
+            <div class="hair">
+                <div class="h1"></div>
+                <div class="h2"></div>
+                <div class="h3"></div>
+                <div class="h4"></div>
+                <div class="h5"></div>
+            </div>
+            <div class="eyer">
+                <div class="eyeb2"></div>
+            </div>
+        </div>
+        <div class="dress">
+            <div class="sleevel"></div>
+            <div class="sleever"></div>
+            <div class="collar">
+                <div class="c1"></div>
+                <div class="c2"></div>
+            </div>
+            <div class="button"></div>
+            <div class="pants">
+                <div class="belt">
+                    <div class="b1"></div>
+                    <div class="b2"></div>
+                    <div class="b3"></div>
+                    <div class="b4"></div>
+                </div>
+                <div class="p1">
+                    <div class="leg">
+                        <div class="sock">
+                            <div class="shoel"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="p2">
+                    <div class="leg">
+                        <div class="sock">
+                            <div class="shoer"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="handl">
+                <div class="hl1">
+                    <div class="fistl">
+                        <div class="thumbl"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="handr"></div>
+        </div>
+    </div>
+</body>
+</html>

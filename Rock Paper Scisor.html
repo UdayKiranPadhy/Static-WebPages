@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative:900|News+Cycle:700|Philosopher:700" rel="stylesheet">
+	<style >
+	    .img1{
+			width:20%;
+			height:20%;
+			margin-left:10%; 
+			padding-top:10px;
+			padding-bottom: 10px;
+
+		}
+		body{
+			background-color:#e6ffff;
+		}
+		h1{
+			text-align:center; 
+			background: rgba(0, 153, 153,0.25);
+			font-size:150%;
+			color:#006666;
+			font-family: 'Cinzel Decorative', cursive;
+		}
+		b{
+			text-align:right; 
+		}
+		h2{ 
+			background-color:rgb(0, 153, 153); 
+			text-align:center;
+			color:#ffffff; 
+			margin-right:10%; 
+			margin-left:10% ;
+			border-radius: 10px;
+		}
+		.score{
+			text-align: right;
+			margin-right:3%;
+			margin-left:75% ;
+			background: rgba(0, 153, 153,0.25);
+			border-radius:6px;
+			font-family: 'News Cycle', sans-serif;
+			color:#006666;
+		}
+		.im{
+			background: rgba(0, 153, 153,0.25);
+			border-radius:15px; 
+			margin-left:3%;
+			margin-right:3%;   
+		}
+		.sc{
+			background-color:rgb(0, 153, 153);
+			text-align: right;
+			margin-right:3%; 
+			margin-left:75% ;
+			border-radius:6px;
+			font-family: 'Philosopher', sans-serif;
+			color:#ffffff; 
+
+		}
+		.final{
+			background-color: rgb(0, 153, 153);
+			text-align:center;
+			margin-right:3%; 
+			margin-left:3% ;
+			border-radius:15px; 
+			color:#ffffff;
+			font-family: 'Philosopher', sans-serif;
+
+		}
+	</style>
+	<script >
+		var comp_score=0;
+		var you_score=0;
+			function rock(){
+				var choice=["ROCK","PAPER","SCISSOR"];
+				var num=Math.floor(Math.random()*3);
+				var comp_choice=choice[num];
+				document.getElementById("p1").innerHTML="Computer choose: "+comp_choice;
+				document.getElementById("p3").innerHTML="You choose: ROCK"
+				if(comp_choice=="PAPER"){
+					document.getElementById("p2").innerHTML="OH-NO YOU LOSE.";
+					comp_score++;
+				}
+				if(comp_choice=="ROCK"){
+					document.getElementById("p2").innerHTML="ITS A DRAW!!";
+				}
+				if(comp_choice=="SCISSOR"){
+					document.getElementById("p2").innerHTML="YIPPIE!!YOU WIN.";
+					you_score++;
+				}
+				document.getElementById("s1").innerHTML=comp_score;
+				document.getElementById("s2").innerHTML=you_score;
+			}
+			function paper(){
+				var choice=["ROCK","PAPER","SCISSOR"];
+				var num=Math.floor(Math.random()*3);
+				var comp_choice=choice[num];
+				document.getElementById("p1").innerHTML="Computer choose: "+comp_choice;
+				document.getElementById("p3").innerHTML="You choose: PAPER" 
+				if(comp_choice=="PAPER"){
+					document.getElementById("p2").innerHTML="ITS A DRAW!!";
+				}
+				if(comp_choice=="ROCK"){
+					document.getElementById("p2").innerHTML="YIPPIE!!YOU WIN.";
+					you_score++;
+				}
+				if(comp_choice=="SCISSOR"){
+					document.getElementById("p2").innerHTML="OH-NO YOU LOSE.";
+					comp_score++;
+				}
+				document.getElementById("s1").innerHTML=comp_score;
+				document.getElementById("s2").innerHTML=you_score;
+
+			}
+			function scissor(){
+				var choice=["ROCK","PAPER","SCISSOR"];
+				var num=Math.floor(Math.random()*3);
+				var comp_choice=choice[num];
+				document.getElementById("p1").innerHTML="Computer choose: "+comp_choice;
+				document.getElementById("p3").innerHTML="You choose: SCISSOR"
+				if(comp_choice=="PAPER"){
+					document.getElementById("p2").innerHTML="YIPPIE!!YOU WIN.";
+					you_score++;
+				}
+				if(comp_choice=="ROCK"){
+					document.getElementById("p2").innerHTML="OH-NO YOU LOSE.";
+					comp_score++;
+				}
+				if(comp_choice=="SCISSOR"){
+					document.getElementById("p2").innerHTML="ITS A DRAW!!";
+				}
+				document.getElementById("s1").innerHTML=comp_score;
+				document.getElementById("s2").innerHTML=you_score;
+
+			}
+		
+	</script>
+</head>
+<body>
+	<h1>ROCK-PAPER-SCISSOR</h1>
+	
+<div class="sc">
+	<p>SCORE</p>
+	</div>
+<div class="score">
+ <p>COMP: <b id="s1"></b><br>
+ YOU: <b id="s2"></b><br>
+</p>
+</div>
+
+<h2>CHOOSE YOUR WEAPON</h2>
+<div class="im">
+ <img src="http://picoplex.net/games/rpslp/rock.png" class="img1" onclick="rock()">
+ <img src="http://picoplex.net/games/rpslp/paper.png" class="img1" onclick="paper()">
+ <img src="http://picoplex.net/games/rpslp/scissors.png" class="img1" onclick="scissor()">
+</div>
+<div class="final">
+ 	
+ <p id="p1"></p>
+ <p id="p3"></p>
+ <p id="p2"></p>
+
+ 
+</div>
+	
+	
+</body>
+</html>

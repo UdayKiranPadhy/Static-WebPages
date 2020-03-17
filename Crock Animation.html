@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link href="https://fonts.googleapis.com/css?family=Dokdo" rel="stylesheet">
+   <style>
+        body{
+            margin: 0%;
+            background-color: #ccffff;
+        }
+        .frog{
+            height:120px;
+            width: 160px;
+            border-radius: 50%;
+            background-color: #00cc66;
+            position: absolute;
+            top:28%;
+            left:28%;
+            z-index:10;
+        }
+        .eyel{
+            position: relative;
+            height: 80px;
+            width: 80px;
+            border-radius: 50%;
+            background-color: #00cc66;
+            bottom:35px;
+            right:3px;
+        }
+        .eyer{
+            position: relative;
+            height: 80px;
+            width: 80px;
+            border-radius: 50%;
+            background-color: #00cc66;
+            bottom:114px;
+            left:88px;    
+        }
+        .eyeball{
+            height:60px;
+            width:60px;
+            background-color: #ffffff;
+            position:relative;
+            border-radius:50%;
+            top:10px;
+            left:10px;
+        }
+        .ball{
+            height:35px;
+            width: 35px;
+            border-radius: 50%;
+            position: relative;
+            top:11px;
+            left:11px;
+            background-color: #000000;
+        }
+        .dot{
+            height: 15px;
+            width: 15px;
+            background-color: #ffffff;
+            position: relative;
+            border-radius: 50%;
+            left:5px;
+            top:5px;
+
+        }
+        .mouth{
+            height:70px;
+            width: 90px;
+            background-color:#000000;
+            position:relative;
+            border-radius: 50%;
+            transform:scale(0.5);
+            bottom:125px;
+            left:35px;
+            animation-name: oo;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            transform-style: 
+        }
+        @keyframes oo{
+            
+            50%{
+                transform:scale(1);
+            }
+        }
+        .mn{
+            position: absolute;
+            top:42%;
+            left:23%;
+
+        }
+        .body1{
+            height:200px;
+            width:200px;
+            border-radius: 50%;
+            background-color:  #00cc66;
+            position:relative;
+            
+            z-index: 8;
+            animation-name: croak;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            
+
+        }
+        @keyframes croak{
+            50%{
+                 
+                transform: scale(1.15);
+            }
+        }
+        .stomach{
+            background-color: #70db70;
+            height: 160px;
+            width: 160px;
+            border-radius: 50%;
+            position: relative;
+            top:20px;
+            left:20px;
+        }
+        .legl{
+            width:60px;
+            height:140px;
+            border-radius:60px;
+            position: relative;
+            background-color:  #00cc66;
+            transform: rotate(-40deg);
+            bottom:120px;
+            right:31px;
+        }
+        .legr{
+            width:60px;
+            height:140px;
+            border-radius:60px;
+            position:relative;
+            background-color: #00cc66;
+            transform: rotate(40deg);
+            bottom:260px;
+            left:171px;
+            
+        }
+        .feetl1{
+            height:45px;
+            width: 90px;
+            background-color: #00cc66;
+            border-radius: 50%;
+            position:relative;
+            top:100px;
+            right:28px;
+            transform: rotate(40deg);
+        }
+        .feetr1{
+            height:45px;
+            width: 90px;
+            background-color: #00cc66;
+            border-radius: 50%;
+            position:relative;
+            top:105px;
+            right:0px;
+            transform: rotate(-40deg);
+        }
+        .mud{
+            z-index: -1;
+            background-color:#997300 ;
+            height:35%;
+            width: 100%;
+            position: absolute;
+            bottom:0%;
+        }
+      
+        .croakk{
+            position: absolute;
+            top:2.5%;
+            left:20%;
+            font-size: 60px;
+            font-family: 'Dokdo', cursive;
+            color:#ccffff;
+            animation-name: cc;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+
+
+        }
+        @keyframes cc{
+            50%{
+                color:#00cc66;
+            }
+        }
+</style>
+</head>
+<body>
+    
+    <div class="frog">
+        <div class="eyel">
+            <div class="eyeball">
+                <div class="ball">
+                    <div class="dot"></div>
+                </div>
+            </div>
+        </div>
+        <div class="eyer">
+            <div class="eyeball">
+                <div class="ball">
+                    <div class="dot"></div>
+                </div>
+            </div>
+        </div>
+        <div class="mouth">
+            
+        </div>
+
+    </div>
+    <div class="mn">
+        <div class="body1">
+            <div class="stomach"></div>
+        </div>
+        <div class="legl">
+            <div class="feetl1"></div>
+            <div class="feetl2"></div>
+        </div>
+        <div class="legr">
+            <div class="feetr1"></div>
+            <div class="feetr2"></div>
+        </div>
+    </div>
+    <div class="mud">
+        
+    </div>
+    <div class="croakk">CROAK!!!</div>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link href="https://fonts.googleapis.com/css?family=Courgette|Libre+Baskerville:700|Unica+One" rel="stylesheet">
+<style>
+input[type=text]{
+	margin-top:10%;
+	border-radius:5px;  
+	border:solid #2d4852;
+	padding:2%;
+	font-size:20px; 
+}
+input[type=button]{
+	background-color:#2d4852;
+	color:#ffffff;
+	border-radius:10px;
+	border:solid #2d4852 ;
+	font-size:25px;  
+}
+input[type=button]:hover{
+	background-color:#518294;
+	border: solid #518294;
+}
+
+body{
+	background-color:#3aafa9;
+}
+h1{
+	text-align: center;
+	color:#ffffff; 
+	background:rgba(159, 223, 220,0.8);
+	font-family: 'Libre Baskerville', serif;
+}
+h2{
+	text-align:center;
+	color:#2d4852;
+	font-family: 'Courgette', cursive;
+}
+div{
+	background-color:#def2f1;
+	border-radius:10px;
+	margin-left:6%;
+	margin-right:6%; 
+	text-align: center;
+}
+p{
+	color:#2d4852; 
+	font-size:18px;
+	font-family: 'Unica One', cursive;
+}
+</style>
+
+
+<script>
+	var number=Math.floor(Math.random()*100)+1;
+	var guesses=0;
+	var gueessed_num=[]
+
+	function attempt(){
+		
+		var g=document.getElementById("num").value;
+		gueessed_num.push(g);
+		if(g<1 || g>100){
+			alert("Please enter a number between 1 and 100.");
+		}
+		else if(g<number){
+			guesses+=1;
+			
+			document.getElementById("p1").innerHTML="Your guess is too low.";
+			document.getElementById("p2").innerHTML="No of guesses: "+guesses;
+			document.getElementById("p3").innerHTML="Guessed numbers are: "+gueessed_num;
+
+		}
+		else if(g>number){
+			guesses+=1;
+			
+			document.getElementById("p1").innerHTML="Your guess is too high.";
+			document.getElementById("p2").innerHTML="No of guesses: "+guesses;
+			document.getElementById("p3").innerHTML="Guessed numbers are: "+gueessed_num;
+		}
+		else if(g==number){
+			guesses+=1;
+			
+			document.getElementById("p1").innerHTML="YIPPIEE!!!YOU WIN.";
+			document.getElementById("p2").innerHTML="The number was: "+number;
+			document.getElementById("p3").innerHTML="You gueesed it in "+guesses+" guesses";
+			
+		}
+	
+
+	}
+</script>
+</head>
+<body>
+	<h1>GUESS THE NUMBER<h1>
+	<h2>I am thinking a number between 1-100.<br>Can you guess it?</h2>
+	
+	<form>
+	<div>
+
+		<input type="text" id="num" placeholder="Enter your guess."><br><br><br>
+		<input type="button"  value="GUESS" onclick="attempt()"></button>
+		
+		<p id="p1"></p>
+		<p id="p2">No of guesses:0</p>
+		<p id="p3">Guessed numbers are: None</p><br>
+	</div>
+	</form>
+
+
+
+</body>
+</html>

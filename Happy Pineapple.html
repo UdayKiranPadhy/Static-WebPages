@@ -1,0 +1,282 @@
+<!--Based On a Dribbble Shot 'Pineapple' by RemovT-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Happy Pineapple</title>
+	<link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+<style>
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #FCF8BB;
+}
+
+.container {
+  height: 500px;
+  width: 350px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.container .pineapple {
+  background-color: #FFAA00;
+  height: 180px;
+  width: 140px;
+  border-radius: 65px;
+  position: absolute;
+  top: 138px;
+  background-size: 200% 200%;
+  background-image: repeating-linear-gradient(135deg, transparent 0, transparent 40px, #FF9700 40px, #FF9700 52px), repeating-linear-gradient(45deg, transparent 0, transparent 40px, #FF9700 40px, #FF9700 52px);
+  background-image: -webkit-repeating-linear-gradient(135deg, transparent 0, transparent 40px, #FF9700 40px, #FF9700 52px), repeating-linear-gradient(45deg, transparent 0, transparent 40px, #FF9700 40px, #FF9700 52px);
+  background-position: 0 310px;
+  animation: jump 0.5s infinite;
+  -webkit-animation: jump 0.5s infinite;
+  margin: auto;
+  left: 0;
+  right: 0;
+}
+.container .pineapple::before, .container .pineapple::after {
+  position: absolute;
+  content: "";
+  height: 80px;
+  width: 32px;
+  background-color: #FFAA00;
+  border-radius: 25px;
+  z-index: -1;
+  transform-origin: bottom;
+  -webkit-transform-origin: bottom;
+}
+.container .pineapple::before {
+  top: 25px;
+  left: 10px;
+  transform: rotate(-50deg);
+  animation: hand-l 0.5s infinite;
+  -webkit-transform: rotate(-50deg);
+  -webkit-animation: hand-l 0.5s infinite;
+}
+@keyframes hand-l {
+  50% {
+    transform: rotate(-42deg);
+  }
+}
+@-webkit-keyframes hand-l {
+  50% {
+    -webkit-transform: rotate(-42deg);
+  }
+}
+.container .pineapple::after {
+  top: 25px;
+  right: 10px;
+  transform: rotate(50deg);
+  animation: hand-r 0.5s infinite;
+  -webkit-transform: rotate(50deg);
+  -webkit-animation: hand-r 0.5s infinite;
+}
+@keyframes hand-r {
+  50% {
+    transform: rotate(42deg);
+  }
+}
+@-webkit-keyframes hand-r {
+  50% {
+    -webkit-transform: rotate(42deg);
+  }
+}
+.container .pineapple__leaf {
+  background-color: #498725;
+  height: 70px;
+  width: 70px;
+  border-radius: 70px 0;
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  position: absolute;
+  top: -65px;
+  z-index: -1;
+  animation: leaves 0.5s infinite;
+  -webkit-animation: leaves 0.5s infinite;
+  margin: auto;
+  left: 0;
+  right: 0;
+}
+.container .pineapple__leaf::before, .container .pineapple__leaf::after {
+  position: absolute;
+  content: "";
+  background-color: #3F6B15;
+  height: 70px;
+  width: 70px;
+  border-radius: 70px 0;
+  transform-origin: right;
+  -webkit-transform-origin: right;
+}
+.container .pineapple__leaf::before {
+  transform: rotate(40deg);
+  -webkit-transform: rotate(40deg);
+  right: 20px;
+  top: -5px;
+  animation: leaf-left 0.5s infinite;
+  -webkit-animation: leaf-left 0.5s infinite;
+}
+.container .pineapple__leaf::after {
+  transform: rotate(-40deg);
+  -webkit-transform: rotate(-40deg);
+  left: 20px;
+  top: -5px;
+  animation: leaf-right 0.5s infinite;
+  -webkit-animation: leaf-right 0.5s infinite;
+}
+@keyframes leaves {
+  50% {
+    transform: rotate(135deg) translate(6px, -6px);
+  }
+}
+@-webkit-keyframes leaves {
+  50% {
+    -webkit-transform: rotate(135deg) translate(6px, -6px);
+  }
+}
+@keyframes leaf-left {
+  50% {
+    transform: rotate(32deg);
+  }
+}
+@keyframes leaf-right {
+  50% {
+    transform: rotate(-32deg);
+  }
+}
+@-webkit-keyframes leaf-left {
+  50% {
+    -webkit-transform: rotate(32deg);
+  }
+}
+@-webkit-keyframes leaf-right {
+  50% {
+    -webkit-transform: rotate(-32deg);
+  }
+}
+.container .pineapple__leg-left, .container .pineapple__leg-right {
+  height: 80px;
+  width: 32px;
+  background-color: #FFAA00;
+  border-radius: 25px;
+  z-index: -1;
+  position: absolute;
+}
+.container .pineapple__leg-left {
+  top: 130px;
+  left: 22px;
+  animation: legs 0.6s infinite;
+  -webkit-animation: legs 0.6s infinite;
+}
+.container .pineapple__leg-right {
+  top: 130px;
+  right: 22px;
+  animation: legs 0.6s 0.3s infinite;
+  -webkit-animation: legs 0.6s 0.3s infinite;
+}
+@keyframes legs {
+  50% {
+    transform: translateY(-15px);
+  }
+}
+@-webkit-keyframes legs {
+  50% {
+    -webkit-transform: translateY(-15px);
+  }
+}
+.container .pineapple__eye-left, .container .pineapple__eye-right {
+  background-color: #1e1e1e;
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  position: absolute;
+  animation: blink 1s infinite;
+  -webkit-animation: blink 1s infinite;
+}
+.container .pineapple__eye-left {
+  top: 70px;
+  left: 32px;
+}
+.container .pineapple__eye-right {
+  top: 70px;
+  right: 32px;
+}
+@keyframes blink {
+  20% {
+    transform: scaleY(0.3);
+  }
+  25% {
+    transform: scaleY(1);
+  }
+}
+@-webkit-keyframes blink {
+  20% {
+    -webkit-transform: scaleY(0.3);
+  }
+  25% {
+    -webkit-transform: scaleY(1);
+  }
+}
+.container .pineapple__mouth {
+  height: 20px;
+  width: 35px;
+  background-color: #1e1e1e;
+  border-radius: 0 0 35px 35px;
+  position: absolute;
+  top: 105px;
+  margin: auto;
+  left: 0;
+  right: 0;
+}
+@keyframes jump {
+  50% {
+    top: 133px;
+  }
+}
+@-webkit-keyframes jump {
+  50% {
+    top: 133px;
+  }
+}
+.container .shadow {
+  height: 30px;
+  width: 160px;
+  background-color: rgba(30, 30, 30, 0.05);
+  border-radius: 50%;
+  position: absolute;
+  top: 330px;
+  z-index: -2;
+  animation: shadow 0.5s infinite;
+  -webkit-animation: shadow 0.5s infinite;
+  margin: auto;
+  left: 0;
+  right: 0;
+}
+@keyframes shadow {
+  50% {
+    transform: scaleX(0.85);
+  }
+}
+@-webkit-keyframes shadow {
+  50% {
+    -webkit-transform: scaleX(0.85);
+  }
+}
+
+</style>
+</head>
+<body>
+	<div class="container">
+		<div class="pineapple">
+			<div class="pineapple__leaf"></div>
+			<div class="pineapple__leg-left"></div>
+			<div class="pineapple__leg-right"></div>
+			<div class="pineapple__eye-left"></div>
+			<div class="pineapple__eye-right"></div>
+			<div class="pineapple__mouth"></div>
+		</div>
+		<div class="shadow"></div>
+	</div>
+</body>
+</html>

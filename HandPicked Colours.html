@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Handpicked Palettes</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:500|Raleway|Poppins|Sacramento" rel="stylesheet">
+<style>
+body{
+            background-color: #f4f4f4;
+            padding: 0;
+            margin: 0;
+        }
+        .container{
+            width: 350px;
+            position: absolute;
+            margin: auto;
+            left:0;
+            right: 0;
+        }
+        .palette{
+            height: 150px;
+            width: 330px;
+            background-color: white;
+            border-radius:15px;
+            
+            position: relative;
+            bottom:  130px;
+            right: 15px;
+        }
+        .backshdw{
+            background-color:transparent;
+            box-shadow: 0px 0px 25px 10px rgba(170,170,170,0.2); 
+            height: 20px;
+            width:300px;
+            position: relative;
+            left:30px;
+        }
+        .one{
+            top:170px;
+            margin-top:20px;
+        }
+        .two{
+            top:360px;
+        }
+        .three{
+            top:550px;
+        }
+        .four{
+            top:740px;
+        }
+        .five{
+            top:930px;
+        }
+        .six{
+            top:1120px;
+        }
+        .seven{
+            top:1310px;
+        }
+        .eight{
+            top:1500px;
+        }
+        .nine{
+            top:1690px;
+        }
+        .ten{
+            top:1880px;
+        }
+        .num{
+            background-color: #2d2d2d;
+            height: 60px;
+            width: 60px;
+            position: relative;
+            border-radius: 50%;
+            color:white;
+            position: relative;
+            top:5px;
+            left:5px;
+            
+        }
+        span{
+            position: relative;
+            color: white;
+            font-size: 35px;
+            top:5px;
+            left:21px;
+            font-family: 'Raleway', sans-serif;
+        }
+        .backg{
+            height:70px;
+            width: 70px;
+            background-color: #f4f4f4;
+            border-radius: 50%;
+            position: relative;
+            bottom: 35px;
+            left:128px; 
+        }
+        .hex{
+            
+            width: 330px;
+            height: 25px;
+            position: relative;
+            bottom: 230px;
+            right: 15px;
+            color:#2d2d2d;
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+        }
+        .hx1{
+            position: relative;
+            left:10px;
+        }
+        .hx2{
+            position: relative;
+            bottom: 20px;
+            left:90px;
+        }
+        .hx3{
+            position: relative;
+            bottom: 38px;
+            left:176px;
+        }
+        .hx4{
+            position: relative;
+            bottom: 57px;
+            left:260px;
+        }
+        .clr1,.clr2,.clr3,.clr4{
+            width: 82.5px;
+            height: 75px;
+            position: relative;
+        }
+        .clr1{
+            bottom: 230px;
+            right: 15px;
+            border-radius: 0 0 0 15px;
+        }
+        .clr2{
+            bottom: 305px;
+            left:67.5px;
+        }
+        .clr3{
+            bottom: 380px;
+            left:150px;
+        }
+        .clr4{
+            bottom:455px;
+            left:232.5px;
+            border-radius: 0 0 15px 0; 
+        }
+        .cl1{
+            background-color:#7fc6b6; 
+        }
+        .cl2{
+            background-color: #d8f1ed;
+        }
+        .cl3{
+            background-color: #ffffff;
+        }
+        .cl4{
+            background-color: #e76079;
+        }
+        .cl5{
+            background-color:#1a3263; 
+        }
+        .cl6{
+            background-color: #e8e2db;
+        }
+        .cl7{
+            background-color: #fab95b;
+        }
+        .cl8{
+            background-color: #f5564e;
+        }
+        .cl9{
+            background-color:#434738; 
+        }
+        .cl10{
+            background-color: #b5d43c;
+        }
+        .cl11{
+            background-color: #d9ef81;
+        }
+        .cl12{
+            background-color: #f7f7f7;
+        }
+        .cl13{
+            background-color:#ece4e2; 
+        }
+        .cl14{
+            background-color: #fcd3d1;
+        }
+        .cl15{
+            background-color: #fcdff3;
+        }
+        .cl16{
+            background-color: #fe929f;
+        }
+        .cl17{
+            background-color:#323642; 
+        }
+        .cl18{
+            background-color: #81bd4a;
+        }
+        .cl19{
+            background-color: #e5e3da;
+        }
+        .cl20{
+            background-color: #cfcdc4;
+        }
+        .cl21{
+            background-color:#6b7a8f; 
+        }
+        .cl22{
+            background-color: #f7882f;
+        }
+        .cl23{
+            background-color: #f7c331;
+        }
+        .cl24{
+            background-color: #dcc7aa;
+        }
+        .cl25{
+            background-color:#2988bc; 
+        }
+        .cl26{
+            background-color: #2f496e;
+        }
+        .cl27{
+            background-color: #f4eade;
+        }
+        .cl28{
+            background-color: #ed8c72;
+        }
+        .cl29{
+            background-color:#f26968; 
+        }
+        .cl30{
+            background-color: #dfe2d2;
+        }
+        .cl31{
+            background-color: #6cbf84;
+        }
+        .cl32{
+            background-color: #323339;
+        }
+        .cl33{
+            background-color: #ffe246;
+        }
+        .cl34{
+            background-color: #f4a5a1;
+        }
+        .cl35{
+            background-color: #1abcbd;
+        }
+        .cl36{
+            background-color: #014254;
+        }
+        .cl37{
+            background-color: #fec6ad;
+        }
+        .cl38{
+            background-color: #a2b75c;
+        }
+        .cl39{
+            background-color: #fe6323;
+        }
+        .cl40{
+            background-color: #1f1f29;
+        }
+        .title{
+            margin-top:22px; 
+            background-color: #fa9796;
+            color:#323339;
+            height: 110px;
+            width:350px; 
+            position: relative;
+            
+            margin-bottom: 10px;
+        }
+        .t1{
+            font-family: 'Sacramento', cursive;
+            font-size:50px;
+            position: relative;
+            bottom: 2px;
+            left:23px; 
+            color:white;
+        }
+        .line{
+            background-color: white;
+            width: 80px;
+            height:1.5px;
+            position: relative;
+            left:135px;
+            bottom: 14px;
+            
+        }
+        .t2{
+            font-family: 'Poppins', sans-serif;
+            font-size: 25px;
+            position: relative;
+            bottom: 9px;
+            left:85px;
+            
+        }
+</style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="title">
+            <div class="t1">Top Handpicked</div>
+            <div class="line"
+></div>            <div class="t2">Color Palletes</div>
+        </div>
+        <div class="backshdw one">
+            <div class="palette">
+                <div class="backg">
+                    <div class="num">
+                        <span>1</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hex">
+                <div class="hx1">7fc6b6</div>
+                <div class="hx2">d8f1ed</div>
+                <div class="hx3">ffffff</div>
+                <div class="hx4">e76079</div>
+            </div>
+            <div class="colors">
+                <div class="clr1 cl1"></div>
+                <div class="clr2 cl2"></div>
+                <div class="clr3 cl3"></div>
+                <div class="clr4 cl4"></div>
+            </div>
+        </div>
+        <div class="backshdw two">
+            <div class="palette">
+                <div class="backg">
+                    <div class="num">
+                        <span>2</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hex">
+                <div class="hx1">1a3263</div>
+                <div class="hx2">e8e2db</div>
+                <div class="hx3">fab95b</div>
+                <div class="hx4">f5564e</div>
+            </div>
+            <div class="colors">
+                <div class="clr1 cl5"></div>
+                <div class="clr2 cl6"></div>
+                <div class="clr3 cl7"></div>
+                <div class="clr4 cl8"></div>
+            </div>
+        </div>
+        <div class="backshdw three">
+            <div class="palette">
+                <div class="backg">
+                    <div class="num">
+                        <span>3</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hex">
+                <div class="hx1">434738</div>
+                <div class="hx2">b5d43c</div>
+                <div class="hx3">d9ef81</div>
+                <div class="hx4">f7f7f7</div>
+            </div>
+            <div class="colors">
+                <div class="clr1 cl9"></div>
+                <div class="clr2 cl10"></div>
+                <div class="clr3 cl11"></div>
+                <div class="clr4 cl12"></div>
+            </div>
+        </div>
+        <div class="backshdw four">
+            <div class="palette">
+                <div class="backg">
+                    <div class="num">
+                        <span>4</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hex">
+                <div class="hx1">ece4e2</div>
+                <div class="hx2">fcd3d1</div>
+                <div class="hx3">fcdff3</div>
+                <div class="hx4">fe929f</div>
+            </div>
+            <div class="colors">
+                <div class="clr1 cl13"></div>
+                <div class="clr2 cl14"></div>
+                <div class="clr3 cl15"></div>
+                <div class="clr4 cl16"></div>
+            </div>
+        </div>
+        <div class="backshdw five">
+            <div class="palette">
+                <div class="backg">
+                    <div class="num">
+                        <span>5</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hex">
+                <div class="hx1">323642</div>
+                <div class="hx2">81bd4a</div>
+                <div class="hx3">e5e3da</div>
+                <div class="hx4">cfcdc4</div>
+            </div>
+            <div class="colors">
+                <div class="clr1 cl17"></div>
+                <div class="clr2 cl18"></div>
+                <div class="clr3 cl19"></div>
+                <div class="clr4 cl20"></div>
+            </div>
+        </div>
+        <div class="backshdw six">
+            <div class="palette">
+                <div class="backg">
+                    <div class="num">
+                        <span>6</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hex">
+                <div class="hx1">6b7a8f</div>
+                <div class="hx2">f7882f</div>
+                <div class="hx3">f7c331</div>
+                <div class="hx4">dcc7aa</div>
+            </div>
+            <div class="colors">
+                <div class="clr1 cl21"></div>
+                <div class="clr2 cl22"></div>
+                <div class="clr3 cl23"></div>
+                <div class="clr4 cl24"></div>
+            </div>
+        </div>
+        <div class="backshdw seven">
+            <div class="palette">
+                <div class="backg">
+                    <div class="num">
+                        <span>7</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hex">
+                <div class="hx1">2988bc</div>
+                <div class="hx2">2f496e</div>
+                <div class="hx3">f4eade</div>
+                <div class="hx4">ed8c72</div>
+            </div>
+            <div class="colors">
+                <div class="clr1 cl25"></div>
+                <div class="clr2 cl26"></div>
+                <div class="clr3 cl27"></div>
+                <div class="clr4 cl28"></div>
+            </div>
+        </div>
+        <div class="backshdw eight">
+            <div class="palette">
+                <div class="backg">
+                    <div class="num">
+                        <span>8</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hex">
+                <div class="hx1">f26968</div>
+                <div class="hx2">dfe2d2d</div>
+                <div class="hx3">6cbf84</div>
+                <div class="hx4">3233339</div>
+            </div>
+            <div class="colors">
+                <div class="clr1 cl29"></div>
+                <div class="clr2 cl30"></div>
+                <div class="clr3 cl31"></div>
+                <div class="clr4 cl32"></div>
+            </div>
+        </div>
+        <div class="backshdw nine">
+            <div class="palette">
+                <div class="backg">
+                    <div class="num">
+                        <span>9</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hex">
+                <div class="hx1">ffe246</div>
+                <div class="hx2">f4a5a1</div>
+                <div class="hx3">1abcbd</div>
+                <div class="hx4">014254</div>
+            </div>
+            <div class="colors">
+                <div class="clr1 cl33"></div>
+                <div class="clr2 cl34"></div>
+                <div class="clr3 cl35"></div>
+                <div class="clr4 cl36"></div>
+            </div>
+        </div>
+        <div class="backshdw ten">
+            <div class="palette">
+                <div class="backg">
+                    <div class="num">
+                        <span>10</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hex">
+                <div class="hx1">fec6ad</div>
+                <div class="hx2">a2b75c</div>
+                <div class="hx3">fe6323</div>
+                <div class="hx4">1f1f29</div>
+            </div>
+            <div class="colors">
+                <div class="clr1 cl37"></div>
+                <div class="clr2 cl38"></div>
+                <div class="clr3 cl39"></div>
+                <div class="clr4 cl40"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

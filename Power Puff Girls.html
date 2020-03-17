@@ -1,0 +1,308 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Power Puff Girls</title>
+    <style>
+
+body{
+            background-color: #cceeff;
+        }
+        .backg{
+            width:350px;
+            height:510px;
+            position: absolute;
+            z-index: -5;
+            }
+        .bubbles{
+            position: relative;
+            left:10px;
+            animation: fly 2s infinite;
+        }
+        @keyframes fly{
+            50%{
+                transform: translateY(30px);
+            }
+        }
+        .face{
+            height:100px;
+            width: 110px;
+            background-color:#ffd9b3;
+            border-radius: 50%;
+            position: relative;
+            top:120px;
+            left:30%;
+        }
+        .eyel,.eyer{
+            height:55px;
+            width: 53px;
+            border-radius: 50%; 
+            background-color: white;
+            position: relative;
+            
+        }
+        .eyel{
+            top:22px;
+            right: 2px;
+            
+        }
+        .eyer{
+            bottom: 30px;
+            left: 60px;
+        }
+        .innerl1,.innerr1{
+            background-color: #7dd1f7;
+            height: 48px;
+            width: 48px;
+            border-radius: 50%;
+            position: relative;
+            
+        }
+        .innerl1{
+            top: 6.5px;
+            left:4px;
+        }
+        .innerr1{
+            top:6px;
+            left:0.2px;
+        }
+        .innerl2,.innerr2{
+            background-color: black;
+            height:35px;
+            width: 35px;
+            border-radius: 50%;
+            position: relative;
+            bottom: 32px;
+        }
+        .innerl2{
+            
+            left:14px;
+        }
+        .innerr2{
+            left:4.2px;
+        }
+        .innerl3,.innerr3{
+            background-color: white;
+            height:20px;
+            width: 20px;
+            border-radius: 50%;
+            position: relative;
+            bottom: 58px;
+            
+        }
+        .innerl3{
+            left:22px;     
+        }
+        .innerr3{
+            left:11.5px;
+        }
+        .hair{
+            background-color: #ffff66;
+            height: 55px;
+            width:115px; 
+            border-radius: 55px 55px 0px 0px;
+            position: relative;
+            bottom: 123px;
+            right: 2.5px;
+        }
+        .hair1{
+            
+            height: 0px;
+            width: 0px;
+            border-bottom:20px solid  #ffdd99;
+            border-left:6px solid  transparent;
+            border-right:6px solid  transparent;
+            position: relative;
+            top:35px;
+            left:52px;
+        }
+        .hair2,.hair4{
+            background-color: #ffff66;
+            height:31px;
+            width: 31px;
+            border-radius: 50%;
+            position: relative;
+            
+            
+            z-index: -1;
+        }
+        .hair2{
+            right: 20px;
+            bottom: 150px;
+            transform: scale(1.7) rotate(25deg);
+        }
+        .hair4{
+            transform: scale(1.7) rotate(-25deg);
+            bottom: 180px;
+            left:100px;
+
+        }
+        .hair3,.hair5{
+            height: 0px;
+            width: 0px;
+            border-top:20px solid  #ffff66;
+            border-left:15px solid  transparent;
+            border-right:15px solid  transparent;
+            position: relative;
+            top:21px;
+            
+        }
+        .hair3{
+            left:1px;
+        }
+        .hair5{
+            right:0.2px;
+        }
+        .dress{
+            background-color:#7dd1f7;
+            height: 80px;
+            width: 50px;
+            position: relative;
+            top:110px;
+            left:132.5px;
+            z-index: -1;
+        }
+        .dress2{
+            height: 30px;
+            background-color: black;
+            position: relative;
+            top:15px;
+        }
+        .legl{
+            height:55px;
+            width: 25px;
+            background-color: white;
+            position: relative;
+            top:110px;
+            left:132.5px;
+        }
+        .shoel{
+            width: 25px;
+            height: 14px;
+            background-color: black;
+            border-radius: 0px 0px 14px 14px;
+            position: relative;
+            top:50px;
+        }
+        .buckle{
+            width:15px;
+            height: 7.5px;
+            background-color: white;
+            border-radius: 0px 0px 7.5px 7.5px;
+            position: relative;
+            top:2.5px;
+            left:4.5px; 
+        }
+        .shoer{
+            width: 25px;
+            height: 14px;
+            background-color: black;
+            border-radius: 0px 0px 14px 14px;
+            position: relative;
+            top:25px;
+            left:2px;
+        }
+        .buckle1{
+            width:15px;
+            height: 7.5px;
+            background-color: white;
+            border-radius: 0px 0px 7.5px 7.5px;
+            position: relative;
+            top:2.5px;
+            left:4.5px; 
+        }
+        .legr{
+            height:40px;
+            width: 28px;
+            background-color: white;
+            border-radius: 50%; 
+            position: relative;
+            top:35px;
+            left:155px;
+        }
+        .handl{
+            height: 60px;
+            width: 20px;
+            border-radius: 20px;
+            background-color: #ffd9b3;
+            transform: rotate(45deg);
+            position: relative;
+            bottom: 70px;
+            left:115px;
+            z-index: -2;
+        }
+        .handr{
+            height: 60px;
+            width: 20px;
+            border-radius: 20px;
+            background-color: #ffd9b3;
+            transform: rotate(-45deg);
+            position: relative;
+            bottom: 130px;
+            left:180px;
+            z-index: -2;
+        }
+        .mouth{
+            background-color: transparent;
+            height: 12.5px;
+            width: 25px;
+            background-color: white;
+            border-radius:0px 0px 20px 20px; 
+            position: relative;
+            bottom: 145px;
+            left:40px;
+        }
+        a{
+            color:black;
+            position:relative ;
+            font-size:25px;
+            top:50px;
+            left:60px;
+        }
+
+</style>
+</head>
+<body>
+    <div class="backg">
+        <div class="bubbles">
+            <div class="face">
+                <div class="eyel">
+                    <div class="innerl1"></div>
+                    <div class="innerl2"></div>
+                    <div class="innerl3"></div>
+                </div>
+                <div class="eyer">
+                    <div class="innerr1"></div>
+                    <div class="innerr2"></div>
+                    <div class="innerr3"></div>
+                </div>
+                <div class="hair">
+                    <div class="hair1"></div>
+                </div>
+                <div class="hair2">
+                    <div class="hair3"></div>
+                </div>
+                <div class="hair4">
+                    <div class="hair5"></div>
+                </div>
+                <div class="mouth"></div>
+            </div>
+            <div class="dress">
+                <div class="dress2"></div>
+            </div>
+            <div class="legl">
+                <div class="shoel">
+                    <div class="buckle"></div>
+                </div>
+            </div>
+            <div class="legr">
+                <div class="shoer">
+                    <div class="buckle1"></div>
+                </div>
+            </div>
+            <div class="handl"></div>
+            <div class="handr"></div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mood Slider</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+<style>
+body{
+    background-color: #f4b927;
+    padding: 0;
+    margin: 0;
+}
+.wrapper{
+    height: 320px;
+    width: 350px;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0; 
+}
+.container{
+    height: 250px;
+    width: 340px;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0; 
+    background-color: white;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 0 25px 10px rgba(194,142,10,0.3);
+            box-shadow: 0 0 25px 10px rgba(194,142,10,0.3);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+}
+input[type="range"]{
+    width: 90%;
+    height: 3.5px;
+    -webkit-appearance:none;
+    background-color: #dcdcdc;
+    border-radius: 6px;
+    outline: none;
+    margin-top: 60px;
+}
+input[type="range"]::-webkit-slider-thumb{
+    -webkit-appearance:none;
+    height: 20px;
+    width: 20px;
+    background-color: #1c1c1c;
+    border-radius: 50%;
+    -webkit-box-shadow: 0 0 10px 2px rgba(0,0,0,0.1);
+            box-shadow: 0 0 10px 2px rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+input[type="range"]:active::-webkit-slider-thumb{
+    background-color:white;
+    border: 5px solid #1c1c1c; 
+    -webkit-tap-highlight-color:rgba(0,0,0,0) !important;
+}
+.material-icons{
+    font-size: 130px;
+    color: #f4b927;
+}
+</style>
+</head>
+<body>
+<div class="wrapper">
+    <div class="container">
+        <i class="material-icons" id="emoji">
+        sentiment_satisfied
+        </i>
+        <input type="range" min="0" max="4" value="2" id="slider">
+    </div>
+</div>
+<script>
+    var slider=document.getElementById("slider");
+    var emoji=document.getElementById("emoji");
+    var emoticons=["mood_bad",
+    "sentiment_very_dissatisfied",
+    "sentiment_satisfied",
+    "sentiment_satisfied_alt",
+    "sentiment_very_satisfied"
+    ];
+
+    slider.oninput=function(){
+        emoji.innerHTML=emoticons[slider.value];
+    }
+</script>
+</div>
+</body>
+</html>

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Girl Riding Scooter</title>
+<style>
+body{
+            background-color: #f3ffcc;
+        }
+        .backg{
+            top:2%;
+            left:10%;
+            position: absolute;
+            z-index: -5;
+            animation: ride 4s infinite;
+            transform-origin: bottom;
+            transform: rotate(2deg);
+        }
+        a{
+            color:pink;
+            position:absolute ;
+            top:490px;
+        }
+        @keyframes ride{
+            
+            50%{
+                transform: rotate(-2deg)
+            }
+        }
+        .girl{
+            background-color: #662200;
+            width: 100px;
+            height:180px;
+            position: relative;
+            border-radius:60px;
+            left:100px;
+            
+        }
+        .face{
+            background-color: #ffe0b3;
+            height:70px;
+            width:80px;
+            border-radius: 0px 0px 70px 70px;
+            position: relative;
+            top: 50px;
+            left:10px; 
+        }
+        .glass1,.glass2{
+            background-color: #ccccff;
+            height:25px;
+            width: 39px;
+            position: relative;
+            
+        }
+        .glass1{
+            top:12px;
+            right:2px;
+            border-radius: 25px;
+        }
+        .glass2{
+            border-radius: 25px;
+            left:47px;
+        }
+        .s{
+            background-color: #ccccff;
+            height:5px;
+            width:25px;
+            position: relative;
+            right:20px;
+            top:8px; 
+        }
+        .lip{
+            width: 20px;
+            height: 20px;
+            background:#ffb3b3;
+            -webkit-border-radius: 20px 0px;
+            border-radius: 20px 0px;
+            left:31px;
+            top:20px;
+            transform: rotate(45deg);
+            position: relative;
+        }
+        .line{
+            position: relative;
+            background-color: white;
+            width:7px;
+            height:1.1px;
+            left:37.5px;
+            top:9px;
+            
+        }
+        .neck{
+            height:30px;
+            width: 25px;
+            background-color: #ffe0b3;
+            position: relative;
+            top:18px;
+            left:27.5px;
+            border-radius: 0px 0px 30px 30px;
+            z-index: 5;
+        }
+        .top{
+            height: 150px;
+            width: 100px;
+            background-color:#ff9999;
+            position: relative;
+            right: 10px;
+            top:5px;
+        }
+        .neck1{
+            height:38px;
+            width:80px;
+            background-color: #ffe0b3;
+            border-radius: 0px 0px 50px 50px;
+            position: relative;
+            bottom: 145px;
+            left:0px;
+        }
+        .handl{
+            height:85px;
+            width: 25px;
+            background-color:#ff9999;
+            position: relative;
+            bottom: 182px;
+            right: 20px;
+            transform:rotate(10deg);
+            z-index: -1;
+            
+        }
+        .handr{
+            height:85px;
+            width: 25px;
+            background-color:#ff9999;
+            position: relative;
+            bottom: 267px;
+            left: 75px;
+            transform:rotate(-10deg);
+            z-index: -1;
+        }
+        .fist1,.fist2{
+            height:22px;
+            width: 30px;
+            background-color:   #ffe0b3;
+            position: relative;
+            border-radius: 5px;
+            z-index:5; 
+        }
+        .fist1{
+            right: 45px;
+            bottom: 272px;
+        }
+        .fist2{
+            bottom: 294px;
+            left:95px;
+        }
+        .leg1,.leg2{
+            background-color: #a6a6a6;
+            height: 120px;
+            width: 60px;
+            border-radius:60px;
+            position: relative; 
+        }
+        .leg1{
+            bottom: 255px;
+            transform: rotate(-10deg);
+            right: 30px;
+        }
+        .leg2{
+            bottom:375px;
+            transform: rotate(10deg);
+            left: 50px; 
+        }
+        .headlight{
+            background-color: #ffdb4d;
+            height:60px;
+            width: 80px;
+            border-radius: 50%;
+            position: relative;
+            left: 110px;
+            top:0px;
+        }
+        .handle{
+            background-color: #bfbfbf;
+            height: 15px;
+            width: 180px;
+            position: relative;
+            left:60px;
+            top:35px; 
+        }
+        .light{
+            background-color: rgba(255,255,255,0.5);
+            height: 33px;
+            width: 50px;
+            border-radius: 50%;
+            position: relative;
+            bottom:7px;
+            left:15px;
+        }
+        .side{
+            background-color:  #ffdb4d;
+            height: 21px;
+            width: 100px;
+            position: relative;
+            right:10px;
+            top:17px;
+            border-radius: 5px;
+        }
+        .n{
+            background-color: #ffdb4d;
+            height: 35px;
+            width: 20px;
+            position: relative;
+            left: 140px;
+            bottom: 10px; 
+        }
+        .sbody{
+            background-color: #ffdb4d;
+            height: 200px;
+            width: 140px;
+            position: relative;
+            left: 80px;
+            bottom: 13px;
+            border-radius: 100px 100px 150px 150px;
+        }
+        .s1,.s2,.s3{
+            height: 3px;
+            width: 25px;
+            background-color: rgba(0,0,0,0.1);
+            position: relative;
+        }
+        .s1{
+            top:30px;
+            left:55px;
+        }
+        .s2{
+            top:33px;
+            left:55px;
+        }
+        .s3{
+            top:36px;
+            left: 55px;
+        }
+        .tyre{
+            background-color:#666666;
+            height: 80px;
+            width:40px;
+            border-radius:40px;
+            position: relative;
+            top:145px;
+            left: 47px;
+        }
+        .g{
+            background-color: #e6b800;
+            height:80px;
+            width: 60px;
+            border-radius: 40px 40px 0px 0px;
+            position: relative;
+            top:22px;
+            left:37px;
+        }
+</style>
+   
+</head>
+<body>
+    <div class="backg">
+        <div class="girl">
+            <div class="face">
+                <div class="glass1">
+                    <div class="glass2">
+                        <div class="s"></div>
+                    </div>
+                </div>
+                <div class="lip"></div>
+                <div class="line"></div>
+                <div class="neck"></div>
+                <div class="top"></div>
+                <div class="neck1"></div>
+                <div class="handl"></div>
+                <div class="handr"></div>
+                <div class="fist1"></div>
+                <div class="fist2"></div>
+                <div class="leg1"></div>
+                <div class="leg2"></div>
+            </div>
+        </div>
+        <div class="scooter">
+            <div class="handle"></div>
+            <div class="headlight">
+                <div class="side"></div>
+                <div class="light"></div>
+
+            </div>
+            <div class="n"></div>
+            <div class="sbody">
+                <div class="slits">
+                    <div class="s1"></div>
+                    <div class="s2"></div>
+                    <div class="s3"></div>
+                </div>
+                <div class="tyre"></div>
+                <div class="g"></div>
+            </div>
+        </div>
+            
+    </div>
+</body>
+</html>

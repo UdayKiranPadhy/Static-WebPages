@@ -1,0 +1,172 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chameleon-CSS Mini Art</title>
+	<link href="https://fonts.googleapis.com/css?family=Poppins:500&display=swap" rel="stylesheet">	
+	<style>
+		body{
+			background-color: #BDF052;
+			padding: 0;
+			margin: 0;
+		}
+		.container{
+			height: 450px;
+			width: 350px;
+			position: absolute;
+			-webkit-transform: translate(-50%,-50%);
+			    -ms-transform: translate(-50%,-50%);
+			        transform: translate(-50%,-50%);
+			top: 50%;
+			left: 50%;
+		}
+		.wrapper{
+			background-color: white;
+			height: 300px;
+			width: 300px;
+			position: absolute;
+			margin: auto;
+			left: 0;
+			right: 0;
+			top:30px;
+			-webkit-box-shadow:0 15px 40px rgba(109, 204, 0,0.6);
+			        box-shadow:0 15px 40px rgba(109, 204, 0,0.6);
+			z-index: -2;
+		}
+		.chameleon{
+			background-color: #BDF052;
+			height: 70px;
+			width: 70px;
+			border-radius: 6px 35px 35px 0;
+			position: absolute;
+			top:100px;
+			right: 78px;
+		}
+		.chameleon:before{
+			content: "";
+			background-color: #BDF052;
+			height: 50px;
+			width: 100px;
+			position: absolute;
+			right:50px;
+			bottom: 0; 
+			border-radius: 50px 50px 0 0;
+		}
+		.chameleon:after{
+			content: "";
+			background-color:#77DD00 ;
+			height: 30px;
+			width: 60px;
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			border-radius: 30px 0 35px 0; 
+		}
+		.tail{
+			height: 100px;
+			width: 100px;
+			-webkit-box-shadow: -20px -5px 0 #BDF052;
+			        box-shadow: -20px -5px 0 #BDF052;
+			border-radius: 50%;
+			left: -67px;
+			top:13px;
+			-webkit-transform: rotate(-55deg);
+			    -ms-transform: rotate(-55deg);
+			        transform: rotate(-55deg);
+			z-index: 3;
+			position: absolute;
+		}
+		.eye{
+			background-color: #262626;
+			height: 12px;
+			width: 12px;
+			border-radius: 50%;
+			position: absolute;
+			-webkit-box-shadow: 0.5px 0.5px 0 1px #FDBF00,
+			5px 5px 0 8px #77DD00;
+			        box-shadow: 0.5px 0.5px 0 1px #FDBF00,
+			5px 5px 0 8px #77DD00;
+			; 
+			top:12px;
+			left: 10px;
+		}
+		.leg{
+			height:25px;
+			width:50px;
+			background-color: #77DD00;
+			border-radius: 25px 25px 0 0; 
+			position: absolute;
+			left: -78px;
+			bottom: 0;
+			-webkit-box-shadow: 46px 0 0 0 #77DD00;
+			        box-shadow: 46px 0 0 0 #77DD00;
+			z-index: 2;
+		}
+		.leg:after{
+			content: "";
+			position: absolute;
+			height:12px;
+			width: 6px; 
+			background-color: #77DD00;
+			bottom: -11px;
+			border-radius: 0 0 5px 5px;
+			right: 0;
+			-webkit-box-shadow: 46px 0 0 #77DD00;
+			        box-shadow: 46px 0 0 #77DD00;
+		}
+		.branch{
+			z-index: -1;
+			background-color: #53433F;
+			height: 20px;
+			width: 220px;
+			position: absolute;
+			bottom: -16px;
+			right: -40px;
+			border-radius: 0 10px 10px 0;
+		}
+		.branch:before{
+			content: "";
+			height: 20px;
+			width: 25px;
+			border-radius: 0 35px;
+			background-color: #FDBF00;
+			position: absolute;
+			right: -5px;
+			top:17px;
+		}
+		.branch:after{
+			content: "";
+			background-color: #FF9100;
+			height: 20px;
+			width: 25px;
+			border-radius: 0 35px;
+			right: 4px;
+			top:21.5px;
+			-webkit-transform: rotate(40deg);
+			    -ms-transform: rotate(40deg);
+			        transform: rotate(40deg);
+			position: absolute;
+		}
+		.wrapper:after{
+			content: "";
+			z-index: 3;
+			background-color: rgba(255,255,255,0.3);
+			height: 100%;
+			width: 50%;
+			position: absolute;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="wrapper">
+			<div class="chameleon">
+				<div class="tail"></div>
+				<div class="eye"></div>
+				<div class="leg"></div>
+				<div class="branch"></div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

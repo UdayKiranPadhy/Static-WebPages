@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link href="https://fonts.googleapis.com/css?family=Signika" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Codystar|Dancing+Script|Permanent+Marker" rel="stylesheet">
+    <style type="text/css">
+        .d1{
+            width:350px;
+            height:530px;
+            background-color:#20bdff;
+            position:absolute;
+            border-radius:5px;
+            padding:10px;
+            top:700px;
+            
+        }
+        .wish{
+            color:#9580ff;
+            position: relative;
+            top:10px;
+            text-align:center;
+            font-weight: bold;
+
+        }
+        .d2{
+           
+            background: linear-gradient(to bottom right,#9580ff, #20bdff, #a5fecb); 
+            color:#ffffff;
+            font-family: 'Signika', sans-serif;
+            position: absolute;
+            top:90px;
+            padding:10px;
+            width:350px;
+
+        }
+        .b1{
+            background-color:#ffffff;
+            color:#20bdff;
+            font-size:20px;
+            border-radius:20px;
+            justify-content:center;
+            font-weight:bold;
+            padding:5px;
+            border-style: none;
+        }
+        .msg{
+            color:#ffffff;
+            font-style:italic;
+            font-size:25px;
+            line-height:30px;
+        }
+        .f1{
+            padding-left:20px;
+        }
+        select{
+            color:#20bdff;
+            background-color: #ffffff;
+            border-radius:15px;
+        }
+        .d3{
+          padding-left:2px;
+          padding-right:2px;
+          padding-top:0px;
+          padding-bottom: 0px;
+          width:336px;
+          border-bottom: none; 
+          border-top:10px solid #20bdff;
+          border-left:15px solid #9580ff;
+          border-right:15px solid #20bdff;
+          top:10px;
+          position: absolute;
+       
+        }
+
+    </style>
+</head>
+<body>
+        <div class="d3">
+        <center><h1 style="background-color:#ffffff;"><span style="font-size:25px;color:#20bdff;font-family: 'Abril Fatface', cursive;">GREETING    CARD    MAKER:</span></h1></center></div>
+        <div class="d2">
+        <form>
+        <p class="f1">WHAT'S THE OCCASION:<br>
+        <input type="radio" name="message" id="m1" value="HAPPY BIRTHDAY"><span style="color:#ffffff;">Birthday</span><br>
+          <input type="radio" name="message" id="m2" value="CONGRATULATIONS!!"><span style="color:#ffffff;">Congrats</span><br>
+          <input type="radio" name="message" id="m4" value="I LOVE YOU"><span style="color:#ffffff;">Love you</span><br>
+          <input type="radio" name="message" id="m3" value="I MISS YOU"><span style="color:#ffffff;">Missing You</span><br></p>
+          <p class="f1">PICK A BACKGROUND COLOUR:<br><input type="color" name="bg" id="bgc" value="#ffffff"></p>
+          <p class="f1">PICK A HEADING COLOUR:<br><input type="color" name="fc" id="fc" value="#ffffff"></p>
+          <p class="f1">PICK A MESSAGE COLOUR:<br><input type="color" name="pc" id="pc" value="#ffffff"></p>
+          <p class="f1">PICK A FONT FOR HEADING:<br><select id="fonts">
+            <option value="Times New Roman">Times New Roman</option>
+            <option value="Dancing Script">Dancing Script</option>
+            <option value="Comic Sans MS">Comic Sans MS</option>
+            <option value="Impact">Impact</option>
+            <option value="Codystar">Codystar</option>
+            <option value="Permanent Marker">Permanent Marker</option>
+            <option value="Abril Fatface">Abril Fatface</option>
+        </select></p>
+        <p class="f1">PICK A FONT FOR MESSAGE:<br><select id="fonts1">
+            <option value="Times New Roman">Times New Roman</option>
+            <option value="Dancing Script">Dancing Script</option>
+            <option value="Comic Sans MS">Comic Sans MS</option>
+            <option value="Impact">Impact</option>
+            <option value="Codystar">Codystar</option>
+            <option value="Permanent Marker">Permanent Marker</option>
+            <option value="Abril Fatface">Abril Fatface</option>
+        </select></p>
+          <center><button type="button" class="b1" onclick="make()">MAKE A CARD</button> <br>OR<br> 
+          <button type="button" class="b1" onclick="randm()">RANDOM CARD</button></center>
+    </form>
+</div><br><br>
+    <div class="d1" id="d1">
+        <h1 class="wish" id="p1">WISHES</h1><hr>
+        <center><p class="msg" id="p2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation. </p><br><br>
+        <img src="https://cdn130.picsart.com/237584856126212.png?r1024x1024" id="sticker" alt="Sticker" width="150px" height="150px"></center>
+    </div>
+<script type="text/javascript">
+    function randm(){
+        var num=Math.floor(Math.random() * 4);    
+        var a1=["HAPPY BIRTHDAY","CONGRATULATIONS","I MISS YOU","I LOVE YOU"];
+        var a2=[" Another adventure filled year awaits you. Welcome it by celebrating your birthday with pomp and splendor. Wishing you a very happy and fun-filled birthday!","Congratulations. I knew the record would stand until it was broken.Wishing you even more success in the future.","There’s no need to be apart from you for a thousand miles to miss you. There’s no need to be apart from you for a period of time to miss you. I just miss you!","The best love is the kind that awakens the soul; that makes us reach for more, that plants the fire in our hearts and brings peace to our minds. That’s what I hope to give you forever."];
+        var a3=["https://gallery.yopriceville.com/var/albums/Free-Clipart-Pictures/Cakes-PNG/Chocolate_Cake_with_Cherries_PNG_Large_Clipart.png?m=1434276657","https://www.freeiconspng.com/uploads/congratulations-png-15.png","http://www.stickpng.com/assets/images/580b57fcd9996e24bc43c4be.png","https://www.pngarts.com/files/1/Valentines-Day-Couple-PNG-Free-Download.png"];
+        var message=a1[num];
+        var para=a2[num];
+        var color='rgba(' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + Math.random() + ')';
+        var fc='rgb(' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ')';
+        var pc='rgb(' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ')';
+        var ff1=["Times New Roman","Dancing Script","Comic Sans MS","Impact","Codystar","Abril Fatface","Permanent Marker"];
+        var fontss=ff1[Math.floor(Math.random() * ff1.length)];
+        var font1=ff1[Math.floor(Math.random() * ff1.length)];
+        document.getElementById("p1").innerHTML=message;
+        document.getElementById("p2").innerHTML=para;
+        document.getElementById("d1").style.backgroundColor = color;
+        document.getElementById("p1").style.color=fc;
+        document.getElementById("p2").style.color=pc;
+        document.getElementById("p1").style.fontFamily=fontss;
+        document.getElementById("p2").style.fontFamily=font1;
+        document.getElementById("sticker").src=a3[num];
+
+    }
+    function make(){
+        var message;
+        var para;
+        var color=document.getElementById("bgc").value;
+        var fc=document.getElementById("fc").value;
+        var pc=document.getElementById("pc").value;
+        var e = document.getElementById("fonts");
+        var fontss= e.options[e.selectedIndex].value;
+        var d = document.getElementById("fonts1");
+        var font1= d.options[d.selectedIndex].value;
+        if(document.getElementById("m1").checked){
+            message=document.getElementById("m1").value;
+            para=" Another adventure filled year awaits you. Welcome it by celebrating your birthday with pomp and splendor. Wishing you a very happy and fun-filled birthday!";
+            document.getElementById("sticker").src="https://gallery.yopriceville.com/var/albums/Free-Clipart-Pictures/Cakes-PNG/Chocolate_Cake_with_Cherries_PNG_Large_Clipart.png?m=1434276657";
+        }
+        if(document.getElementById("m2").checked){
+            message=document.getElementById("m2").value;
+            para="Congratulations. I knew the record would stand until it was broken.Wishing you even more success in the future.";
+            document.getElementById("sticker").src="https://www.freeiconspng.com/uploads/congratulations-png-15.png";
+        }
+        if(document.getElementById("m3").checked){
+            message=document.getElementById("m3").value;
+            para="There’s no need to be apart from you for a thousand miles to miss you. There’s no need to be apart from you for a period of time to miss you. I just miss you!";
+            document.getElementById("sticker").src="http://www.stickpng.com/assets/images/580b57fcd9996e24bc43c4be.png";
+        }
+        if(document.getElementById("m4").checked){
+            message=document.getElementById("m4").value;
+            para="The best love is the kind that awakens the soul; that makes us reach for more, that plants the fire in our hearts and brings peace to our minds. That’s what I hope to give you forever.";
+            document.getElementById("sticker").src="https://www.pngarts.com/files/1/Valentines-Day-Couple-PNG-Free-Download.png";
+        }
+        document.getElementById("p1").innerHTML=message;
+        document.getElementById("p2").innerHTML=para;
+        document.getElementById("d1").style.backgroundColor = color;
+        document.getElementById("p1").style.color=fc;
+        document.getElementById("p2").style.color=pc;
+        document.getElementById("p1").style.fontFamily=fontss;
+        document.getElementById("p2").style.fontFamily=font1;
+}
+</script>
+</body>
+</html>

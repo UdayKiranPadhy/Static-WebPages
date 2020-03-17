@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Avatar Maker</title>
+	<link href="https://fonts.googleapis.com/css?family=Quicksand:700&display=swap" rel="stylesheet">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<style>
+	body{
+			background-color: white;
+			padding: 0;
+			margin: 0;
+		}
+		.container{
+			width: 350px;
+			height: 500px;
+			position: absolute;
+			margin: auto;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			background-color: #e5e5e5;
+			border-radius: 5px;
+			z-index: -15;
+			-webkit-box-shadow: 0 15px 45px rgba(20,20,20,0.3);
+			        box-shadow: 0 15px 45px rgba(20,20,20,0.3);
+	    }
+		.face{
+			height:150px;
+			width: 150px; 
+			position: absolute;
+			margin: auto;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+		}
+		.backhair{
+			height: 200px;
+			width: 200px;
+			position: absolute;
+			left: -25px;
+			top: -5px;
+			z-index: -10;
+		}
+		.fronthair{
+			height: 70px;
+			width: 110px;
+			position: absolute;
+			z-index: 100;
+			top: -2px;
+			left: 20px;
+		}
+		.backhair_item,.fronthair_item{
+			position: absolute;
+			fill: #C2581E;
+			display: none;
+		}
+		#backhair1{
+			display: block;
+		}
+		#fronthair1{
+			display: block;
+		}
+		#backhair3{
+			bottom: 17px;
+		}
+		#fronthair5{
+			top:1px;
+		}
+		.dress{
+			width: 90px;
+			height: 60px;
+			position: absolute;
+			position: absolute;
+			margin: auto;
+			left: 0;
+			right: 0;
+			bottom: 125px;
+		}
+		.dress_item{
+			position: absolute;
+			display: none;
+		}
+		#dress3{
+			display: block;
+		}
+		.buttons{
+			padding:0 20px;
+			height: 120px;
+			background-color: #8942A8;
+			border-radius: 5px 5px 0 0;
+		}
+		.buttons>.row{
+			width: 100%;
+			height: 50%;
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-align: center;
+			    -ms-flex-align: center;
+			        align-items: center;
+			-ms-flex-pack: distribute;
+			    justify-content: space-around;
+		}
+		.row>button{
+			padding: 10px 16px;
+			color: #8942a8;
+			font-family: 'Quicksand', sans-serif;
+			font-weight: 700;
+			font-size: 15px;
+			background-color: white;
+			border: none;
+			border-radius: 50px;
+			outline: none;
+			cursor: pointer;
+		}
+		.links{
+			height: 40px;
+			width: 100%;
+			position: absolute;
+			bottom: 40px;
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-align: center;
+			    -ms-flex-align: center;
+			        align-items: center;
+			-ms-flex-pack: distribute;
+			    justify-content: space-around;
+		}
+		.links>a{
+			display: block;
+			background-color: #8942A8;
+			color: white;
+			text-decoration: none;
+			padding: 8px 20px;
+			font-family: 'Quicksand', sans-serif;
+			font-weight: 700;
+			font-size: 17px;
+			letter-spacing: 0.9px;
+			border-radius: 3px;
+		}
+</style>
+</head>
+<body>
+	<div class="container">
+		<div class="buttons">
+			<div class="row">
+				<button class="front_hair_btn">Front Hair</button>
+				<button class="back_hair_btn">Back Hair</button>
+				
+			</div>
+			<div class="row">
+				<button class="hair_color_btn">Hair Color</button>
+				<button class="eye_color_btn">Eye Color</button>
+				<button class="dress_btn">Dress</button>
+			</div>
+		</div>
+		<div class="face">
+			<!--SVG FACE-->
+			<svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="0 0 150 150">
+				<g>
+				    <path d="M27.75,56.5h1a0,0,0,0,1,0,0v14a0,0,0,0,1,0,0h-1a7,7,0,0,1-7-7v0A7,7,0,0,1,27.75,56.5Z" style="fill: #eb8d4d"/>
+				    <path d="M128.25,56.5h1a0,0,0,0,1,0,0v14a0,0,0,0,1,0,0h-1a7,7,0,0,1-7-7v0a7,7,0,0,1,7-7Z" transform="translate(250.5 127) rotate(-180)" style="fill: #eb8d4d"/>
+				    <rect x="62.75" y="110" width="25" height="37" rx="9.7791" ry="9.7791" style="fill: #eb8d4d"/>
+				    <rect x="27.75" y="3" width="95" height="119" rx="47.5" ry="47.5" style="fill: #f7a46c"/>
+				    <rect class="eye" x="48.75" y="52.5" width="12" height="12" rx="6" ry="6" style="fill: #8c4527"/>
+				    <rect class="eye" x="89.75" y="52.5" width="12" height="12" rx="6" ry="6" style="fill: #8c4527"/>
+				    <path d="M95.25,84.5a18.0544,18.0544,0,0,1-5.27,12.73,18.0079,18.0079,0,0,1-6.82,4.27,17.7988,17.7988,0,0,1-5.91,1h-4a17.95,17.95,0,0,1-16.58-11,17.76,17.76,0,0,1-1.42-7Z" style="fill: #99313b"/>
+				    <path d="M95.25,84.5a17.76,17.76,0,0,1-1.42,7H56.67a17.76,17.76,0,0,1-1.42-7Z" style="fill: #fff"/>
+				    <path d="M82.195,101.5a17.7988,17.7988,0,0,1-5.91,1h-4a17.9819,17.9819,0,0,1-3.98-.44,5.9956,5.9956,0,0,1,5.98-5.56h2A5.99,5.99,0,0,1,82.195,101.5Z" style="fill: #c4393e"/>
+				    <path d="M75.25,64.5h0a5,5,0,0,1,5,5v6a0,0,0,0,1,0,0h-10a0,0,0,0,1,0,0v-6A5,5,0,0,1,75.25,64.5Z" style="fill: #eb8d4d"/>
+  				</g>
+			</svg>
+			<div class="backhair">
+				<!--SVG BACKHAIR ITEM 1-->
+				<svg id="backhair1" class="backhair_item" xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+					<rect x="42.5" width="115" height="190" rx="56.9999" ry="56.9999"/>
+				</svg>
+				<!--SVG BACKHAIR ITEM 2-->
+				<svg id="backhair2" class="backhair_item" xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+	  				<path d="M171.28,138.33a28.003,28.003,0,0,1-41.81,32.97,29.0069,29.0069,0,0,1-55.5-1.83,28.0041,28.0041,0,0,1-44.36-30.84,29.4969,29.4969,0,0,1,3.45-57.12A17.9826,17.9826,0,0,1,42.78,51.3,57.0092,57.0092,0,0,1,99.5,0h1a57.0033,57.0033,0,0,1,56.69,51.04,17.9963,17.9963,0,0,1,11.4,30.82,29.502,29.502,0,0,1,2.69,56.47Z"/>
+				</svg>
+				<!--SVG BACKHAIR ITEM 3-->
+				<svg id="backhair3" class="backhair_item" xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+					<path d="M192,34v1a34.0607,34.0607,0,0,1-39,33.64V88H49V68.28A34.34,34.34,0,0,1,42,69,33.997,33.997,0,0,1,8,35V34A34.01,34.01,0,0,1,74.35,23.5,49.6721,49.6721,0,0,1,99,17h4a49.7089,49.7089,0,0,1,22.96,5.58A34.0086,34.0086,0,0,1,192,34Z"/>
+				</svg>
+				<!--SVG BACKHAIR ITEM 4-->
+				<svg id="backhair4" class="backhair_item" xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  					<path d="M100,0H99A56.9927,56.9927,0,0,0,42,56.9854v56.9855c5.3348,4.474,27.3672,21.9061,60,20.9946a90.492,90.492,0,0,0,55-20.9946V56.9854c0-16.6912-6.5259-31.4556-19.77-43.1516C123.7335,1.9144,107.3394.256,100,0Z"/>
+				</svg>
+				<!--SVG BACKHAIR ITEM 5-->
+				<svg id="backhair5" class="backhair_item" xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+				    <path d="M99.5,0h1a57,57,0,0,1,57,57v99a0,0,0,0,1,0,0h-58a57,57,0,0,1-57-57V57A57,57,0,0,1,99.5,0Z" />
+				</svg>
+				<!--SVG BACKHAIR ITEM 6-->
+				<svg id="backhair6" class="backhair_item" xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+			  		<path d="M186.64,165.6656,183.78,178l-12.13-2.8187a9.9927,9.9927,0,0,1-7.48-11.9946l.46-1.9792a6.984,6.984,0,0,1-4.87-4.408l-.34-.95a6.94,6.94,0,0,1,.37-5.5875,7.0232,7.0232,0,0,1-5.03-4.458l-.34-.95a6.9511,6.9511,0,0,1-.19-4.1482,7,7,0,0,1-3.47-3.8982l-.34-.95a6.94,6.94,0,0,1,.37-5.5875,7.0232,7.0232,0,0,1-5.03-4.458l-.34-.95a6.9511,6.9511,0,0,1-.19-4.1482,7,7,0,0,1-3.47-3.8982l-.34-.95a6.94,6.94,0,0,1,.37-5.5875,7.0232,7.0232,0,0,1-5.03-4.458l-.34-.95a6.9322,6.9322,0,0,1,.07-4.9178H63.74a7.0259,7.0259,0,0,1-.25,3.9182l-.34.95a7.0234,7.0234,0,0,1-5.03,4.458,6.9807,6.9807,0,0,1,.37,5.5875l-.34.95a7.016,7.016,0,0,1-3.48,3.8982,6.9472,6.9472,0,0,1-.18,4.1482l-.34.95a7.0234,7.0234,0,0,1-5.03,4.458,6.9807,6.9807,0,0,1,.37,5.5875l-.34.95a7.016,7.016,0,0,1-3.48,3.8982,6.9472,6.9472,0,0,1-.18,4.1482l-.34.95a7.0234,7.0234,0,0,1-5.03,4.458,6.9807,6.9807,0,0,1,.37,5.5875l-.34.95a7.019,7.019,0,0,1-4.87,4.418l.46,1.9691a9.9926,9.9926,0,0,1-7.48,11.9946L16.13,177,13.26,164.666a9.98,9.98,0,0,1,5.5-11.3049,6.9563,6.9563,0,0,1-.25-5.3476l.34-.95a7.0236,7.0236,0,0,1,5.03-4.458,6.9806,6.9806,0,0,1-.37-5.5875l.34-.95a7.0163,7.0163,0,0,1,3.48-3.8983,6.9472,6.9472,0,0,1,.18-4.1482l.34-.95a7.0236,7.0236,0,0,1,5.03-4.458,6.9806,6.9806,0,0,1-.37-5.5875l.34-.95a7.0163,7.0163,0,0,1,3.48-3.8983,6.9472,6.9472,0,0,1,.18-4.1482l.34-.95a7.0236,7.0236,0,0,1,5.03-4.458,6.9806,6.9806,0,0,1-.37-5.5875l.34-.95a6.9834,6.9834,0,0,1,4.1-4.1682,16.6015,16.6015,0,0,1-2.45-8.7061V56.9744A56.9875,56.9875,0,0,1,100.5,0h1a56.9875,56.9875,0,0,1,57,56.9744V84.0422a15.8724,15.8724,0,0,1-3.19,9.5657,6.9858,6.9858,0,0,1,2.75,3.4785l.34.95a6.9806,6.9806,0,0,1-.37,5.5875,7.0235,7.0235,0,0,1,5.03,4.458l.34.95a6.9477,6.9477,0,0,1,.18,4.1482,7.0162,7.0162,0,0,1,3.48,3.8983l.34.95a6.9806,6.9806,0,0,1-.37,5.5875,7.0235,7.0235,0,0,1,5.03,4.458l.34.95a6.9477,6.9477,0,0,1,.18,4.1482,7.0162,7.0162,0,0,1,3.48,3.8983l.34.95a6.9806,6.9806,0,0,1-.37,5.5875,7.0235,7.0235,0,0,1,5.03,4.458l.34.95a6.9568,6.9568,0,0,1-.25,5.3476A9.9743,9.9743,0,0,1,186.64,165.6656Z" />
+				</svg>
+			</div><!--backhair Close-->
+			<div class="fronthair">
+				<!--SVG FRONTHAIR ITEM 1-->
+				<svg id="fronthair1" class="fronthair_item" xmlns="http://www.w3.org/2000/svg" width="110" height="70" viewBox="0 0 110 70">
+  					<path d="M104.88,49.75V50H47.15L44,38,41.71,50H35V37L23.66,50H5.12a50.0182,50.0182,0,0,1,50-50h.01A49.7515,49.7515,0,0,1,104.88,49.75Z" />
+				</svg>
+				<!--SVG FRONTHAIR ITEM 2-->
+				<svg id="fronthair2" class="fronthair_item" xmlns="http://www.w3.org/2000/svg" width="110" height="70" viewBox="0 0 110 70">
+				  <path d="M12,53.5a.57.57,0,0,0,.01.13h-.02A.57.57,0,0,0,12,53.5Z" />
+				  <path d="M19,53.5a1.2091,1.2091,0,0,0,.01.19h-.02A1.2091,1.2091,0,0,0,19,53.5Z" />
+				  <path d="M26,53.5a2.0887,2.0887,0,0,0,.01.25h-.02A2.0887,2.0887,0,0,0,26,53.5Z" />
+				  <path d="M33,53.5a1.6141,1.6141,0,0,0,.02.31h-.04A1.6141,1.6141,0,0,0,33,53.5Z" />
+				  <path d="M40,53.5c0,.12.01.25.02.37h-.04C39.99,53.75,40,53.62,40,53.5Z" />
+				  <path d="M47,53.5a3.1048,3.1048,0,0,0,.03.43h-.06A3.1048,3.1048,0,0,0,47,53.5Z" />
+				  <path d="M54,53.5a2.6315,2.6315,0,0,0,.04.49h-.08A2.6315,2.6315,0,0,0,54,53.5Z" />
+				  <path d="M61,53.5a2.5041,2.5041,0,0,0,.05.55h-.1A2.5041,2.5041,0,0,0,61,53.5Z" />
+				  <path d="M68,53.5a3.08,3.08,0,0,0,.06.61h-.12A3.08,3.08,0,0,0,68,53.5Z" />
+				  <path d="M82,53.5a3.4744,3.4744,0,0,0,.08.73h-.16A3.4744,3.4744,0,0,0,82,53.5Z" />
+				  <path d="M89,53.5a2.9528,2.9528,0,0,0,.1.79h-.19A3.4169,3.4169,0,0,0,89,53.5Z" />
+				  <path d="M96.11,54.36l-.22-.01A3.4144,3.4144,0,0,0,96,53.5,3.4335,3.4335,0,0,0,96.11,54.36Z" />
+				  <path d="M104.8794,40.2312l-.01.2-1.83-.02a3.492,3.492,0,0,1-6.76-.05,3.4335,3.4335,0,0,1-.11-.86,3.4144,3.4144,0,0,1-.11.85,3.4906,3.4906,0,0,1-6.79-.06,2.9528,2.9528,0,0,1-.1-.79,3.4169,3.4169,0,0,1-.09.79,3.5018,3.5018,0,0,1-6.91-.79,3.4971,3.4971,0,0,1-6.93.67h-.14a3.493,3.493,0,0,1-6.87-.06,3.08,3.08,0,0,1-.06-.61,3.08,3.08,0,0,1-.06.61,3.4924,3.4924,0,0,1-6.89-.06,2.5041,2.5041,0,0,1-.05-.55,2.5041,2.5041,0,0,1-.05.55,3.493,3.493,0,0,1-6.91-.06,2.6315,2.6315,0,0,1-.04-.49,2.6315,2.6315,0,0,1-.04.49,3.4949,3.4949,0,0,1-6.93-.06,3.1048,3.1048,0,0,1-.03-.43,3.1048,3.1048,0,0,1-.03.43,3.4978,3.4978,0,0,1-6.95-.06c-.01-.12-.02-.25-.02-.37,0,.12-.01.25-.02.37a3.4963,3.4963,0,0,1-6.96-.06,1.6141,1.6141,0,0,1-.02-.31,1.6141,1.6141,0,0,1-.02.31,3.496,3.496,0,0,1-6.97-.06,2.0887,2.0887,0,0,1-.01-.25,2.0887,2.0887,0,0,1-.01.25,3.4968,3.4968,0,0,1-6.98-.06,1.2091,1.2091,0,0,1-.01-.19,1.2091,1.2091,0,0,1-.01.19,3.4935,3.4935,0,0,1-6.98-.06.57.57,0,0,1-.01-.13.57.57,0,0,1-.01.13,3.4965,3.4965,0,0,1-6.99-.06h-.05c.09-11.04,5.78-20.99,14.89-28.16,9.12-7.16,21.65-11.53,35.45-11.41h.01C82.9394.2412,105.0694,18.2512,104.8794,40.2312Z" />
+				</svg>
+				<!--SVG FRONTHAIR ITEM 3-->
+				<svg id="fronthair3" class="fronthair_item" xmlns="http://www.w3.org/2000/svg" width="110" height="70" viewBox="0 0 110 70">
+				    <path d="M104.88,49.75V50H83.67A44.1957,44.1957,0,0,1,75,28,48.4133,48.4133,0,0,1,63.33,50H5.12a50.0182,50.0182,0,0,1,50-50h.01A49.7515,49.7515,0,0,1,104.88,49.75Z" />
+				</svg>
+				<!--SVG FRONTHAIR ITEM 4-->
+				<svg id="fronthair4" class="fronthair_item"  xmlns="http://www.w3.org/2000/svg" width="110" height="70" viewBox="0 0 110 70">
+				    <path d="M104.88,49.71v.07c-1.7719-.3845-8.3481-3.439-13.88-11.8106-4.8815-7.3873-6.2431-13.9276-6-15.9872A60.0686,60.0686,0,0,1,67,42.9657C41.0934,61.5868,9.2409,51.3207,5.12,49.92A49.9984,49.9984,0,0,1,55.12,0h.01A49.7317,49.7317,0,0,1,104.88,49.71Z" />
+				</svg>
+				<!--SVG FRONTHAIR ITEM 5-->
+				<svg id="fronthair5" class="fronthair_item" xmlns="http://www.w3.org/2000/svg" width="110" height="70" viewBox="0 0 110 70">
+				    <path d="M55,0V10.2164A34.9705,34.9705,0,0,1,19.83,45H7.55C8.59,19.978,29.44,0,55,0Z" />
+ 					<path d="M102.45,45H90.17A34.9705,34.9705,0,0,1,55,10.2164V0A47.6469,47.6469,0,0,1,88.59,13.7571,46.555,46.555,0,0,1,102.45,45Z" />
+				</svg>
+			</div><!--fronthair Close-->
+		</div><!--Face Close-->
+		<div class="dress">
+			<!--SVG DRESS ITEM 1-->
+			<svg id="dress1"  class="dress_item" xmlns="http://www.w3.org/2000/svg" width="90" height="60" viewBox="0 0 90 60">
+			  <g>
+			    <path d="M31,0H60.5A25.5,25.5,0,0,1,86,25.5V56a0,0,0,0,1,0,0H5a0,0,0,0,1,0,0V26A26,26,0,0,1,31,0Z" style="fill: #eb8d4d"/>
+			    <rect x="5" y="22" width="81" height="34" style="fill: #f6d749"/>
+			    <line x1="19.5" y1="22" x2="19.1" y2="2.89" style="fill: none;stroke: #f6d749;stroke-miterlimit: 10;stroke-width: 4.495611667633057px"/>
+			    <line x1="71.5" y1="22" x2="71.09" y2="2.31" style="fill: none;stroke: #f6d749;stroke-miterlimit: 10;stroke-width: 4.495611667633057px"/>
+			  </g>
+			</svg>
+			<!--SVG DRESS ITEM 2-->
+			<svg id="dress2"  class="dress_item" xmlns="http://www.w3.org/2000/svg" width="90" height="60" viewBox="0 0 90 60">
+				<g>
+				    <path d="M31,0H60.5A25.5,25.5,0,0,1,86,25.5V56a0,0,0,0,1,0,0H5a0,0,0,0,1,0,0V26A26,26,0,0,1,31,0Z" style="fill: #eb8d4d"/>
+				    <path d="M86,28V56H5V26A26.0014,26.0014,0,0,1,22.18,1.54Z" style="fill: #17a8f7"/>
+				</g>
+			</svg>
+			<!--SVG DRESS ITEM 3-->
+			<svg id="dress3"  class="dress_item" xmlns="http://www.w3.org/2000/svg" width="90" height="60" viewBox="0 0 90 60">
+			 	<g>
+			    <path d="M85.5,25.5V56H4.5V26a25.9993,25.9993,0,0,1,26-26H60A25.5042,25.5042,0,0,1,85.5,25.5Z" style="fill: #eb8d4d"/>
+			    <path d="M85.5,25.5V56H4.5V26a26.0228,26.0228,0,0,1,26-26h2V7.83A8.9717,8.9717,0,0,0,32.57,9a10.177,10.177,0,0,0,10.1,9h6.5A8.3217,8.3217,0,0,0,57.5,9.67V0H60A25.3943,25.3943,0,0,1,79.43,9a24.9285,24.9285,0,0,1,4.23,7A25.2354,25.2354,0,0,1,85.5,25.5Z" style="fill: #94d950"/>
+			    <path d="M36.62,16H6.49a26.0251,26.0251,0,0,1,4.35-7H32.57A10.0815,10.0815,0,0,0,36.62,16Z" style="fill: #fff;opacity: 0.3"/>
+			    <path d="M83.66,16H54.59A8.33,8.33,0,0,0,57.5,9.67V9H79.43A24.9285,24.9285,0,0,1,83.66,16Z" style="fill: #fff;opacity: 0.3"/>
+			    <rect x="4.5" y="27" width="81" height="7" style="fill: #fff;opacity: 0.3"/>
+			    <rect x="4.5" y="45" width="81" height="7" style="fill: #fff;opacity: 0.3"/>
+			  </g>
+			</svg>
+		</div><!--Dress Close-->
+	</div><!--Container Close-->
+</body>
+</html>

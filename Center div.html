@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>5 Ways to Center Stuff</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600|Work+Sans:400,500&display=swap" rel="stylesheet">
+    <style type="text/css">
+        :root{
+            /*Colors*/
+            --color-white: #ffffff;
+            --color-light-grey: #f5f5f5;
+            --color-med-grey: #d4d4d4;
+            --color-dark-grey: #323232;
+            --color-primary: #24345a;
+            --color-secondary: #ffc64c;
+            --color-tertiary: #20C4D5;
+
+
+            /*Fonts*/
+            --font-primary: "Montserrat",sans-serif;
+            --font-secondary: "Work Sans",sans-serif;
+        }
+        *,*::before,*::after {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        html {
+            font-size: 62.5%;
+        }
+        @media only screen and (min-width: 600px) {
+        html {
+            font-size: 68%;
+            } 
+         }
+
+        @media only screen and (min-width: 768px) {
+          html {
+            font-size: 75%;
+            }
+        }
+
+        body{
+            background-color: var(--color-white);
+        }
+        .heading-primary{
+            width: 100%;
+            background-color:var(--color-primary) ;
+            color: white;
+            text-align: center;
+            text-transform: capitalize;
+            padding: 1.5rem 0 ;
+            font-size: 2.8rem;
+            font-family: 'Montserrat',sans-serif;
+            font-weight: 600;
+            letter-spacing: 0.1rem;
+        }
+        .heading-primary>span{
+            font-size:2.3rem;
+            color:#ffc64c;
+            display: inline-block;
+            margin-top: 0.5rem;
+        }
+        .page{
+            margin: 2rem auto;
+            width: 90%;
+        }
+        .page:not(.page-1){
+            display: none;
+        }
+        .heading-secondary{
+            background-color: var(--color-secondary);
+            padding: 1.5rem 3rem;
+            color: white;
+            font-family: var(--font-secondary);
+            font-size: 1.8rem;
+            display: inline-block;
+        }
+        .output{
+            background-color: var(--color-white);
+            width: 100%;
+            height: 20rem;
+            border:0.08rem solid var(--color-med-grey) ;
+            border-radius: 0.3rem;
+        }
+        .box{
+            background-color: var(--color-tertiary);
+            height: 8rem;
+            width: 8rem; 
+        }
+        .heading-tertiary{
+            margin:1.5rem 0 1rem 0;
+            color: var(--color-primary);
+            font-family: var(--font-primary);
+            font-size: 1.6rem;
+        }
+        .html-code,.css-code{
+            border:0.08rem solid var(--color-med-grey) ;
+            border-radius: 0.3rem;
+            padding:1rem 1.4rem;
+            background-color: var(--color-light-grey);
+        }
+        pre{
+            font-family: var(--font-secondary);
+            font-size: 1.6rem;
+            line-height: 2.2rem;
+            color: var(--color-dark-grey);
+        }
+        .button-box{
+            width: 90%;
+            height: 5rem;
+            margin: 0 auto;
+            position: relative;
+        }
+        .button-box>button{
+            background-color: var(--color-secondary);
+            font-size: 1.8rem;
+            font-weight: 600;
+            position: absolute;
+            border: none;
+            color: var(--color-white);
+            padding:0.8rem 1.8rem;
+            font-family: var(--font-primary);
+            outline: none;
+        }
+        .button-prev{
+            left: 0;
+        }
+        .button-next{
+            right: 0;
+        }
+
+        .output-1{
+            position: relative;
+        }
+        .box-1{
+            position: absolute;
+            margin: auto;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+        .output-2{
+            position: relative;
+        }
+        .box-2{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        .output-3{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .output-4{
+            display: grid;
+              grid-template-rows: 100%;
+             grid-template-columns: 100%;
+        }
+        .box-4{
+            justify-self: center;
+              align-self: center;
+        }
+        .output-5{
+            display: flex;
+        }
+        .box-5{
+            height: 80px;
+            width: 80px;
+            margin: auto;
+        }
+    </style>
+<script>
+var i=0;/*current page*/
+var j=5;/*total pages*/
+
+$(document).ready(function(){
+    $(".button-next").click(function(){
+        $(".page-"+(i+1)).hide();
+        i = (j + i + 1) % j;
+        $(".page-"+(i+1)).show();
+    });
+    $(".button-prev").click(function(){
+        $(".page-"+(i+1)).hide();
+        i = (j + i - 1) % j;
+        $(".page-"+(i+1)).show();
+    });
+});
+</script>
+</head>
+<body>
+    <h1 class="heading-primary">Center Stuff With CSS<br>
+    <span>
+        5 Quick Ways    
+    </span></h1>
+
+    <!--Method 1-->
+    <div class="page page-1">
+        <h2 class="heading-secondary">Method 1</h2>
+        <h3 class="heading-tertiary">RESULT:</h3>
+        <div class="output output-1">
+            <div class="box box-1"></div>
+        </div>
+        <h3 class="heading-tertiary">HTML:</h3>
+        <div class="html-code">
+            <pre>
+&lt;div class="container"&gt;
+    &lt;div class="box"&gt;&lt;/div&gt;
+&lt;/div&gt;</pre>
+        </div>
+        <h3 class="heading-tertiary">CSS:</h3>
+        <div class="css-code">
+            <pre>
+.container{
+    position: relative;
+    height: 200px;
+    width: 800px;
+}    
+.box{
+    height: 80px;
+    width: 80px;
+    background-color:#20C4D5;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}</pre>
+        </div>
+    </div>
+
+    <!--Method 2-->
+    <div class="page page-2">
+        <h2 class="heading-secondary">Method 2</h2>
+        <h3 class="heading-tertiary">RESULT:</h3>
+        <div class="output output-2">
+            <div class="box box-2"></div>
+        </div>
+        <h3 class="heading-tertiary">HTML:</h3>
+        <div class="html-code">
+            <pre>
+&lt;div class="container"&gt;
+    &lt;div class="box"&gt;&lt;/div&gt;
+&lt;/div&gt;</pre>
+        </div>
+        <h3 class="heading-tertiary">CSS:</h3>
+        <div class="css-code">
+            <pre>
+.container{
+    position: relative;
+    height: 200px;
+    width: 800px;
+}    
+.box{
+    height: 80px;
+    width: 80px;
+    background-color:#20C4D5;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}</pre>
+        </div>
+    </div>
+
+    <!--Method 3-->
+    <div class="page page-3">
+        <h2 class="heading-secondary">Method 3</h2>
+        <h3 class="heading-tertiary">RESULT:</h3>
+        <div class="output output-3">
+            <div class="box box-3"></div>
+        </div>
+        <h3 class="heading-tertiary">HTML:</h3>
+        <div class="html-code">
+            <pre>
+&lt;div class="container"&gt;
+    &lt;div class="box"&gt;&lt;/div&gt;
+&lt;/div&gt;</pre>
+        </div>
+        <h3 class="heading-tertiary">CSS:</h3>
+        <div class="css-code">
+            <pre>
+.container{
+    height: 200px;
+    width: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}    
+.box{
+    height: 80px;
+    width: 80px;
+    background-color:#20C4D5;
+}</pre>
+        </div>
+    </div>
+
+    <!--Method 4-->
+    <div class="page page-4">
+        <h2 class="heading-secondary">Method 4</h2>
+        <h3 class="heading-tertiary">RESULT:</h3>
+        <div class="output output-4">
+            <div class="box box-4"></div>
+        </div>
+        <h3 class="heading-tertiary">HTML:</h3>
+        <div class="html-code">
+            <pre>
+&lt;div class="container"&gt;
+    &lt;div class="box"&gt;&lt;/div&gt;
+&lt;/div&gt;</pre>
+        </div>
+        <h3 class="heading-tertiary">CSS:</h3>
+        <div class="css-code">
+            <pre>
+.container{
+    height: 200px;
+    width: 800px;
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: 100%;
+}    
+.box{
+    height: 80px;
+    width: 80px;
+    background-color:#20C4D5;
+    justify-self: center;
+    align-self: center;
+}</pre>
+        </div>
+    </div>
+    
+        <!--Method 5-->
+    <div class="page page-5">
+        <h2 class="heading-secondary">Method 5</h2>
+        <h3 class="heading-tertiary">RESULT:</h3>
+        <div class="output output-5">
+            <div class="box box-5"></div>
+        </div>
+        <h3 class="heading-tertiary">HTML:</h3>
+        <div class="html-code">
+            <pre>
+&lt;div class="container"&gt;
+    &lt;div class="box"&gt;&lt;/div&gt;
+&lt;/div&gt;</pre>
+        </div>
+        <h3 class="heading-tertiary">CSS:</h3>
+        <div class="css-code">
+            <pre>
+.container{
+    height: 200px;
+    width: 800px;
+    display: flex;
+}    
+.box{
+    height: 80px;
+    width: 80px;
+    background-color:#20C4D5;
+    margin: auto;
+}</pre>
+        </div>
+    </div>
+    <div class="button-box">
+        <button class="button-prev">
+            <i class="fa fa-arrow-left" aria-hidden="true"></i> PREV
+        </button>
+        <button class="button-next">
+            NEXT <i class="fa fa-arrow-right" aria-hidden="true"></i>
+        </button>
+    </div>
+
+
+    <script>
+        
+    </script>
+</body>
+</html>

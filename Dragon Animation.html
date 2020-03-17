@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <style type="text/css">
+                body{
+            background-color: #97dbf5;
+            padding: 0;
+            margin: 0;
+        }
+        .container{
+            height: 500px;
+            width: 500px;
+            position: absolute;
+            margin: auto;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+        .drogon{
+            position: relative;
+            top: 70px;
+        }
+        .face{
+            position: relative;
+            background-color: #c42754;
+            height: 110px;
+            width: 85px;
+            border-radius: 85px 85px 0 0;
+            left: 200px;
+            top:50px;
+        }
+        .mouth{
+            background-color: #ee3466;
+            width: 105px;
+            height:75px;
+            position: relative;
+            top:50px;
+            right: 10px;
+            border-radius: 65px;
+        }
+        .nostril{
+            background-color: #8c1436;
+            height: 15px;
+            width: 15px;
+            border-radius: 50%;
+            position: relative;
+            border:8px solid #ee3466;
+        }
+        .n1{
+            bottom: 10px;
+            right: 8px;
+        }
+        .n2{
+            bottom: 40px;
+            left: 80px;
+        }
+        .ear{
+            background-color:#8c1436;
+            height: 50px;
+            width: 11px;
+            border-radius: 22px;
+            border:9px solid #c42754;
+            position: relative;
+            z-index: -1;
+        }
+        .el{
+            transform: rotate(-40deg);
+            -webkit-transform: rotate(-40deg);
+            bottom: 104px;
+            right: 8px;
+        }
+        .er{
+            transform: rotate(40deg);
+            -webkit-transform: rotate(40deg);
+            bottom: 170px;
+            left: 69px;
+        }
+        .horn{
+            background-color: #fca01b;
+            height: 68px;
+            width: 20px;
+            border-radius: 20px;
+            position: relative;
+            z-index: -1;
+        }
+        .hl{
+            bottom: 259px;
+            left: 20px;
+        }
+        .hr{
+            bottom: 327px;
+            left: 50px;
+        }
+        .l1,.l2,.l3,.l4,.l5,.l6{
+            background-color: #e76a12;
+            height: 4px;
+            width:16px;
+            position: absolute;
+            border-radius: 5px;
+            left: 2px; 
+        }
+        .l1{
+            top:8px;
+        }
+        .l2{
+            top:17px;
+        }
+        .l3{
+            top:26px;
+        }
+        .l4{
+            top:35px;
+        }
+        .l5{
+            top:44px;
+        }
+        .l6{
+            top:52px;
+        }
+        .eye{
+            background-color: #262626;
+            height: 8px;
+            width: 8px;
+            border-radius: 50%;
+            position: relative;
+        }
+        .e1{
+            bottom: 315px;
+            left: 15px;
+        }
+        .e2{
+            bottom: 323px;
+            left: 60px;
+        }
+        .shadow{
+            background-color: #8c1436;
+            height: 50px;
+            width: 100%;
+            border-radius:80px;
+            position: relative;
+            bottom: 280px;
+            z-index: -1; 
+        }
+        .neck{
+            width: 47px;
+            height: 90px;
+            background-color: #c42754;
+            position: relative;
+            left: 219px;
+            top:72px;
+        }
+        .stomach{
+            height: 140px;
+            width: 140px;
+            background-color: #c42754;
+            border-radius: 50%;
+            position: relative;
+            top:50px;
+            right: 48px;
+        }
+        .inner{
+            background-color: #ee3466;
+            height: 60px;
+            width: 60px;
+            border-radius: 50%;
+            position: relative;
+            top:70px;
+            left: 41px;
+        }
+        .ln1,.ln2,.ln3,.ln4,.ln5,.ln6,.ln7{
+            background-color: #8c1436;
+            height: 8px;
+            width:35px;
+            border-radius: 8px;
+            position: absolute;
+            left: 55px; 
+        }
+        .ln1{
+            bottom: 175px;
+        }
+        .ln2{
+            bottom: 160px;
+        }
+        .ln3{
+            bottom: 145px;
+        }
+        .ln4{
+            bottom: 130px;
+        }
+        .ln5{
+            bottom: 115px;
+        }
+        .ln6{
+            bottom: 100px;
+        }
+        .ln7{
+            bottom: 85px;
+        }
+        .wing{
+            height: 120px;
+            width: 240px;
+            background-color: #0e3441;
+            border-radius: 200px 200px 0 0;
+            position: relative;
+            z-index: -1;
+            
+        }
+        
+        .w1{
+            transform: rotate(25deg);
+            -webkit-transform: rotate(25deg);
+            bottom: 35px;
+            left: 20px;
+            animation: wings1 2s infinite;
+            -webkit-animation: wings1 2s infinite;
+        }
+        @keyframes wings1{
+            50%{
+                transform: rotate(15deg);
+            }
+        }
+        -webkit-@keyframes wings1{
+            50%{
+                -webkit-transform: rotate(15deg);
+            }
+        }
+        .w2{
+            transform: rotateY(-180deg) rotate(25deg);
+            -webkit-transform: rotateY(-180deg) rotate(25deg);
+            bottom: 145px;
+            left: 220px;
+            animation:wings2 2s infinite; 
+            -webkit-animation:wings2 2s infinite; 
+                }
+        @keyframes wings2{
+            50%{
+                transform:rotateY(-180deg) rotate(15deg);
+            }
+        }
+        @-webkit-keyframes wings2{
+            50%{
+                transform:rotateY(-180deg) rotate(15deg);
+            }
+        }
+        .hand{
+            background-color: #8c1436;
+            height: 90px;
+            width: 47px;
+            border-radius: 50px;
+            position: relative;
+            z-index: -1;
+        }
+        .h1{
+            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+            bottom: 210px;
+            left: 135px;
+        }
+        .h2{
+            transform: rotate(-45deg);
+            -webkit-transform: rotate(-45deg);
+            bottom: 300px;
+            left: 300px;
+        }
+        .hnd{
+            height: 45px;
+            width: 100px;
+            background-color:#ee3466;
+            border-radius: 90px;
+            position: relative;
+        }
+        .hn1{
+            bottom:350px;
+            left: 118px;
+        }
+        .hn2{
+            transform: rotate(180deg);
+            -webkit-transform: rotate(180deg);
+            bottom: 396.5px;
+            left: 269px;
+        }
+        .nl1,.nl2,.nl3{
+            background-color: #fcc50d;
+            height: 7px;
+            width: 17px;
+            border-radius: 5px;
+            position: absolute;
+            left: 87px;
+        }
+        .nl1{
+            top:7px;
+        }
+        .nl2{
+            top:17px;
+        }
+        .nl3{
+            top:28px;
+        }
+        .wng1{
+            background-color:  #97dbf5;
+            height: 35px;
+            width: 70px;
+            border-radius: 70px 70px 0 0;
+            position:absolute;
+            bottom: -1px;
+            left: 0;
+        }
+        .wng2{
+            background-color: #97dbf5;
+            position: absolute;
+            height: 35px;
+            width: 70px;
+            border-radius: 70px 70px 0 0;
+            bottom:-2px;
+            left: 70px;
+            transform: rotate(1deg);
+            -webkit-transform: rotate(1deg);
+        }
+        .leg{
+            background-color: #8c1436;
+            height: 90px;
+            width: 90px;
+            position: relative;
+            z-index: -1;
+            border-radius: 50px;
+        }
+        .lg1{
+            bottom: 420px;
+            left: 120px;
+        }
+        .lg{
+            background-color: #ee3466;
+            height: 45px;
+            width: 90px;
+            border-radius: 90px 90px 0 0;
+            position:absolute;
+            top:45px;
+            right: 40px;
+        }
+        .lg2{
+            bottom: 510px;
+            left: 270px;
+            transform: rotateY(180deg);
+            -webkit-transform: rotateY(180deg);
+        }
+        .grass{
+            height: 70px;
+            width: 500px;
+            background-color: #8cc839;
+            position: absolute;
+            margin:auto;
+            bottom: 0;
+            left:0;
+            right:0;
+            z-index: -2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="drogon">
+            <div class="face">
+                <div class="mouth">
+                    <div class="nostril n1"></div>
+                    <div class="nostril n2"></div>
+                </div>
+                <div class="ear el"></div>
+                <div class="ear er"></div>
+                <div class="horn hl">
+                    <div class="l1"></div>
+                    <div class="l2"></div>
+                    <div class="l3"></div>
+                    <div class="l4"></div>
+                    <div class="l5"></div>
+                    <div class="l6"></div>
+                </div>
+                <div class="horn hr">
+                    <div class="l1"></div>
+                    <div class="l2"></div>
+                    <div class="l3"></div>
+                    <div class="l4"></div>
+                    <div class="l5"></div>
+                    <div class="l6"></div>
+                </div>
+                <div class="eye e1"></div>
+                <div class="eye e2"></div>
+                <div class="shadow"></div>
+            </div>
+            <div class="neck">
+                <div class="stomach">
+                    <div class="inner"></div>
+                    <div class="ln1"></div>
+                    <div class="ln2"></div>
+                    <div class="ln3"></div>
+                    <div class="ln4"></div>
+                    <div class="ln5"></div>
+                    <div class="ln6"></div>
+                    <div class="ln7"></div>
+                </div>
+            </div>
+            <div class="wing w1">
+                <div class="wng1"></div>
+                <div class="wng2"></div>
+            </div>
+            <div class="wing w2">
+                <div class="wng1"></div>
+                <div class="wng2"></div>
+            </div>
+            <div class="hand h1"></div>
+            <div class="hand h2"></div>
+            <div class="hnd hn1">
+                <div class="nl1"></div>
+                <div class="nl2"></div>
+                <div class="nl3"></div>
+            </div>
+            <div class="hnd hn2">
+                <div class="nl1"></div>
+                <div class="nl2"></div>
+                <div class="nl3"></div>
+            </div>
+            <div class="leg lg1">
+                <div class="lg"></div>
+            </div>
+            <div class="leg lg2">
+                <div class="lg"></div>
+            </div>
+        </div>
+    </div>
+    <div class="grass"></div>
+</body>
+</html>

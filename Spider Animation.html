@@ -1,0 +1,292 @@
+<!-- Inspired By 'Spidercat' GIF created by Markus Magnusson -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Spiderman</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <style type="text/css">
+	:root{
+            --red: #ff6d36;
+            --blue: #336687;
+            --border: #183e5d;
+        }
+        body{
+            padding: 0;
+            margin: 0;
+            background-color: #fcdc58;
+        }
+        .container{
+            height: 500px;
+            width: 350px;
+            position: absolute;
+            margin: auto;
+            top:0;
+            left: 0;
+            right: 0;
+            }
+        .rope{
+            height: 218px;
+            width: 2.5px;
+            background-color: white;
+            position: relative;
+            left:175px;
+            animation:swing 2s infinite;
+            -webkit-animation:swing 2s infinite;
+        }
+        @keyframes swing{
+            50%{
+                transform: translateY(-28px);
+            }
+        }
+        @-webkit-keyframes swing{
+            50%{
+                -webkit-transform: translateY(-28px);
+            }
+        }
+        .legs{
+            height: 18px;
+            width: 120px;
+            border-radius: 50px ;
+            background-color: transparent;
+            box-shadow: 0 0 0 2px var(--border),
+                        0 0 0 17px var(--blue),
+                        0 0 0 19px var(--border);
+            position: relative;
+            top:190px;
+            right: 60px;
+        }
+        .boot-l,.boot-r{
+            height: 20px;
+            width: 40px;
+            background-color: var(--red);
+            position: relative;
+            border:2px solid var(--border);
+        }
+        .boot-l{
+            bottom: 21px;
+            left:16px;
+        }
+        .boot-r{
+            bottom: 45px;
+            transform: rotateY(180deg);
+            -webkit-transform:rotateY(180deg);
+            left:62.5px;
+        }
+        .boot1{
+            width: 0;
+            height: 0;
+            border-bottom:18px solid var(--border);
+            border-left:19px solid transparent;
+            position: relative;
+            bottom: 19px; 
+            left:23.5px;
+        }
+        .boot2{
+            width: 0;
+            height: 0;
+            border-bottom:18px solid var(--red);
+            border-left:16px solid transparent;
+            position: relative;
+            right: 19px;
+            top:4.5px;
+        }
+        .costume{
+            height:100px;
+            width: 90px;
+            background-color: var(--blue);
+            border:2px solid var(--border);
+            position: relative;
+            top:207px;
+            right: 46px; 
+        }
+        .cntr{
+            height:100px;
+            width: 55px;
+            background-color: var(--red); 
+            position: relative;
+            left:18px;
+        }
+        .spider{
+            height: 30px;
+            width: 15px;
+            background-color: var(--border);
+            border-radius: 45%;
+            position: relative;
+            top:50px;
+            left:20px;
+        }
+        .s1,.s3{
+            height:120px;
+            width: 40px;
+            border-radius: 0 0 22px 22px;
+            border-bottom:2px solid var(--border); 
+            position: relative;
+        }
+        .s2,.s4{
+            height:120px;
+            width: 50px;
+            border-radius: 0 0 25px 25px;
+            border-bottom:2px solid var(--border); 
+            position: relative;
+        }
+        .s1{
+            bottom: 110px;
+            right: 13px;
+        }
+        .s2{
+            bottom: 225px;
+            right: 18px;
+        }
+        .s3,.s4{
+            transform: rotateX(180deg);
+            -webkit-transform:rotateX(180deg);
+        }
+        .s3{
+            bottom: 220px;
+            right: 13px;
+        }
+        .s4{
+            bottom: 347px;
+            right: 18px;
+        }
+        .belt{
+            height: 7px;
+            width:94px;
+            background-color: var(--red); 
+            border:2px solid var(--border);
+            right: 4px;
+            bottom: 102px;
+            position: relative;
+        }
+        .hand-r,.hand-l{
+            height: 130px;
+            background-color: var(--blue);
+            width:18px;
+            border:2px solid var(--border);
+            border-radius: 20px;
+            position: relative;
+            transform-origin: bottom;
+            -webkit-transform-origin:bottom;
+        }
+        .hand-r{
+            bottom: 141px;
+            left:79px;
+            transform: rotate(-22deg);
+            -webkit-transform: rotate(-22deg);
+        }
+        .hand-l{
+            bottom: 275px;
+            transform:rotate(22deg);
+            -webkit-transform:rotate(22deg);
+            right: 12px;
+        }
+        .hand1{
+            height: 65px;
+            background-color: var(--red);
+            width:18px;
+            border:2px solid var(--border);
+            border-radius: 20px 20px 0 0;
+            position: relative;
+            right: 2px;
+            bottom: 2px;
+        }
+        .neck{
+            background-color: var(--red);
+            height: 6px;
+            width: 20px;
+            position: relative;
+            bottom: 279px;
+            left:33px;
+            border:2px solid var(--border);
+        }
+        .mask{
+            height: 68px;
+            width: 65px;
+            background-color: var(--red);
+            position: relative;
+            bottom: 282px;
+            border-radius: 20px;
+            border:2px solid var(--border);
+            left:10px;
+        }
+        .eye-l,.eye-r{
+            height: 11px;
+            width: 22px;
+            background-color: white;
+            border-radius:22px 22px 0 0;
+            border:2px solid var(--border);
+            position: relative;
+        }
+        .eye-l{
+            top:25px;
+            left:35px;
+            transform-origin: bottom;
+            -webkit-transform-origin: bottom;
+        }
+        .eye-r{
+            top:10px;
+            left:5px;
+        }
+        .cover{
+            height: 50px;
+            width: 2.5px;
+            position: relative;
+            bottom: 540px;
+            left:44px;
+            background-color:white;
+        }
+        a{
+            position: relative;
+            top:190px;
+            left:43px;
+            font-size: 25px;
+            color:var(--border);
+            font-family: 'Raleway',sans-serif;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="spiderman">
+            <div class="rope">
+                <div class="legs">
+                    <div class="boot-l">
+                        <div class="boot1">
+                            <div class="boot2"></div>
+                        </div>
+                    </div>
+                    <div class="boot-r">
+                        <div class="boot1">
+                            <div class="boot2"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="costume">
+                    <div class="cntr">
+                        <div class="spider">
+                            <div class="s1"></div>
+                            <div class="s2"></div>
+                            <div class="s3"></div>
+                            <div class="s4"></div>
+                        </div>
+                    </div>
+                    <div class="belt"></div>
+                    <div class="hand-r">
+                        <div class="hand1"></div>
+                    </div>
+                    <div class="hand-l">
+                        <div class="hand1"></div>
+                    </div>
+                    <div class="neck"></div>
+                    <div class="mask">
+                        <div class="eye-l"></div>
+                        <div class="eye-r"></div>
+                    </div>
+                    <div class="cover"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
